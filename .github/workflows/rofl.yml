@@ -1,0 +1,83 @@
+name: ROFL node
+
+# Validates block and transaction submissions posted as issue comments.
+#
+# This workflow never mines. Mining happens on the submitter's own machine;
+# all that runs here is validation, which is a handful of hashes and
+# signature checks and finishes in seconds.
+
+on:
+  issue_comment:
+    types: [created]
+
+# One submission at a time. Without this, two blocks arriving together
+# could both validate against the same tip and race on the push.
+concurrency:
+  group: rofl-chain
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  submit:
+    # Only comments on issues labelled "rofl" that actually contain a payload.
+    if: >-
+      github.event.issue.pull_request == null &&
+      contains(github.event.issue.labels.*.name, 'rofl') &&
+      (contains(github.event.comment.body, 'rofl-block-v1:') ||
+       contains(github.event.comment.body, 'rofl-tx-v1:'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate submission
+        id: rofl
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          COMMENT_AUTHOR: ${{ github.event.comment.user.login }}
+        run: python3 submit.py
+
+      - name: Verify the whole chain still replays
+        if: steps.rofl.outputs.changed == 'true'
+        run: python3 verify.py
+
+      - name: Commit
+        if: steps.rofl.outputs.changed == 'true'
+        run: |
+          git config user.name  "rofl-node"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add chain/ README.md assets/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "rofl: submission from @${{ github.event.comment.user.login }}"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push rejected, rebasing (attempt $attempt)"
+            git pull --rebase --autostash || exit 1
+            python3 verify.py || exit 1
+          done
+          echo "could not push after 3 attempts"
+          exit 1
+
+      - name: Reply to the comment
+        if: always() && steps.rofl.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPLY: ${{ steps.rofl.outputs.reply }}
+        run: |
+          printf '%s\n' "$REPLY" > /tmp/reply.md
+          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/reply.md
