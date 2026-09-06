@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=132"><img src="assets/ledger-light.svg?v=132" width="100%" alt="ROFL ledger, height 132"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=133"><img src="assets/ledger-light.svg?v=133" width="100%" alt="ROFL ledger, height 133"></picture>
 
 | | |
 |---|---|
-| **height** | `132` |
-| **tip** | `c51fc9bf228d9668fcc03683da854e79bce9f4799d3b64c89c5581ed0e05900b` |
+| **height** | `133` |
+| **tip** | `84919dda4344ec263bf022e466f64c2b530d88a5300bebd9a5513186a990d235` |
 | **difficulty** | `3,505.3`  (bits `0x1d012b23`) |
-| **chainwork** | `38,430,938,870` expected hashes |
-| **supply** | `6650.00000000 ROFL` in `132` unspent outputs |
+| **chainwork** | `42,106,554,596` expected hashes |
+| **supply** | `6700.00000000 ROFL` in `133` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `11` block(s) |
-| **next halving** | in `77` block(s) |
-| **transactions** | `134` |
+| **next retarget** | in `10` block(s) |
+| **next halving** | in `76` block(s) |
+| **transactions** | `135` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `133` | `84919dda4344ec263bf0…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:56 UTC |
 | `132` | `c51fc9bf228d9668fcc0…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:55 UTC |
 | `131` | `e73adf11c4ef1b9a509c…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:55 UTC |
 | `130` | `b16f11ab80f65e81da44…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:54 UTC |
@@ -44,16 +45,15 @@
 | `126` | `73d060a830bcd7684f0c…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:52 UTC |
 | `125` | `d7b35c491e0b49ce86dd…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:52 UTC |
 | `124` | `7c4b6a55cc8652bb6adf…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:51 UTC |
-| `123` | `15ea0b13a9046cdf2f1b…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:50 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `94` | `70.7%` |
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `27.8%` |
-| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.8%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.8%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `95` | `70.9%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `27.6%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.7%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.7%` |
 
 ### Balances
 
@@ -61,7 +61,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `4700.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `4750.00000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 132. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 133. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
