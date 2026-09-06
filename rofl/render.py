@@ -187,108 +187,69 @@ def update_readme(state: ChainState, path: str = "README.md") -> None:
 # --------------------------------------------------------------------------
 
 PALETTES = {
-    "light": dict(bg="#eef1ec", panel="#e4e8e1", ink="#121916", dim="#68746e",
-                  accent="#8a5f10", teal="#1c5b52", divider="#c8cec6",
-                  pending_top="#e8c878", pending_left="#c9a84a", pending_right="#a88632",
-                  mined_top="#6ec4b0", mined_left="#3d8f7c", mined_right="#2a6b5f"),
-    "dark": dict(bg="#0a0e0c", panel="#0f1512", ink="#e6eae4", dim="#8a968f",
-                 accent="#d9a64c", teal="#5cab9b", divider="#2c3a33",
-                 pending_top="#d9a64c", pending_left="#b8863a", pending_right="#8a6a2a",
-                 mined_top="#6ec4b0", mined_left="#3d8f7c", mined_right="#1f4a42"),
+    "light": dict(bg="#f1f3ef", card="#ffffff", edge="#d5dbd2", ink="#121916",
+                  dim="#68746e", accent="#8a5f10", teal="#1c5b52", link="#b3bcb4",
+                  slot="#c8cec6"),
+    "dark": dict(bg="#0c1210", card="#131b17", edge="#28332e", ink="#e5e9e3",
+                 dim="#7a867f", accent="#d9a64c", teal="#5cab9b", link="#38443e",
+                 slot="#2a352f"),
 }
 
 SVG_HEAD = """<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" \
 viewBox="0 0 {w} {h}" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
-<rect fill="{bg}" width="{w}" height="{h}" rx="8"/>
-<rect fill="{panel}" x="12" y="38" width="{iw}" height="{ih}" rx="6"/>
+<rect fill="{bg}" width="{w}" height="{h}" rx="6"/>
 """
 
 
-def _iso_cube(out, cx, cy, size, top_c, left_c, right_c, *, stroke=None, dash=None):
-    """Isometric cube, bottom edge at cy."""
-    s = size
-    d = s * 0.34
-    h = s * 0.62
-    by = cy - h
-    top = f"{cx},{by} {cx + s / 2 + d},{by + s * 0.17} {cx},{by + s * 0.34} {cx - s / 2 - d},{by + s * 0.17}"
-    right = (
-        f"{cx + s / 2 + d},{by + s * 0.17} {cx + s / 2 + d},{by + s * 0.17 + h} "
-        f"{cx},{by + s * 0.34 + h} {cx},{by + s * 0.34}"
-    )
-    left = (
-        f"{cx - s / 2 - d},{by + s * 0.17} {cx},{by + s * 0.34} "
-        f"{cx},{by + s * 0.34 + h} {cx - s / 2 - d},{by + s * 0.17 + h}"
-    )
-    sw = f' stroke="{stroke}" stroke-width="1"' if stroke else ""
-    ds = f' stroke-dasharray="4 3"' if dash else ""
-    out.append(f'<polygon points="{left}" fill="{left_c}"{sw}{ds}/>')
-    out.append(f'<polygon points="{right}" fill="{right_c}"{sw}{ds}/>')
-    out.append(f'<polygon points="{top}" fill="{top_c}"{sw}{ds}/>')
 
-
-def _svg(state: ChainState, pal: dict, mined_slots: int = 5) -> str:
-    """Mempool.space-style block stream for the README ledger tape."""
-    blocks = state.blocks[-mined_slots:]
-    col_w, pad, div_w = 108, 18, 28
-    pending_cols = 1
-    cols = pending_cols + mined_slots
-    iw = cols * col_w + div_w + 24
-    w = iw + pad * 2
-    h = 198
-    strip_y = 46
-    cube_y = 108
-    cube_s = 46
-    out = [SVG_HEAD.format(w=w, h=h, bg=pal["bg"], panel=pal["panel"], iw=iw, ih=148)]
+def _svg(state: ChainState, pal: dict, slots: int) -> str:
+    blocks = state.blocks[-slots:]
+    bw, gap, pad = 148, 26, 18
+    w = pad * 2 + slots * bw + (slots - 1) * gap
+    h = 138
+    top, cardh = 44, 76
+    out = [SVG_HEAD.format(w=w, h=h, bg=pal["bg"])]
 
     out.append(
-        f'<text x="{pad}" y="24" fill="{pal["ink"]}" font-size="14" font-weight="700">ROFL</text>'
-        f'<text x="{pad + 52}" y="24" fill="{pal["dim"]}" font-size="11.5">'
+        f'<text x="{pad}" y="26" fill="{pal["ink"]}" font-size="15" font-weight="700">ROFL</text>'
+        f'<text x="{pad + 54}" y="26" fill="{pal["dim"]}" font-size="12.5">'
         f'height {state.height} &#183; difficulty {difficulty(state.tip.bits):,.0f} &#183; '
-        f'{state.tip.puzzles()} puzzles / block</text>'
+        f'{state.tip.puzzles()} puzzles per block</text>'
     )
 
-    x0 = pad + 24
-    # Pending / next block (left of divider)
-    px = x0 + col_w / 2
-    out.append(
-        f'<text x="{px}" y="{strip_y + 14}" fill="{pal["accent"]}" font-size="13" '
-        f'font-weight="600" text-anchor="middle">next</text>'
-    )
-    _iso_cube(out, px, cube_y, cube_s, pal["pending_top"], pal["pending_left"],
-              pal["pending_right"], stroke=pal["divider"], dash=True)
-    out.append(
-        f'<text x="{px}" y="{cube_y + 18}" fill="{pal["dim"]}" font-size="9" '
-        f'text-anchor="middle">~10m target</text>'
-    )
+    for slot in range(slots):
+        x = pad + slot * (bw + gap)
+        idx = slot - (slots - len(blocks))
+        if slot:
+            out.append(
+                f'<line x1="{x - gap}" y1="{top + cardh / 2}" x2="{x}" y2="{top + cardh / 2}" '
+                f'stroke="{pal["link"]}" stroke-width="1.5" stroke-dasharray="3 3"/>'
+            )
+        if idx < 0:
+            out.append(
+                f'<rect x="{x}" y="{top}" width="{bw}" height="{cardh}" rx="4" fill="none" '
+                f'stroke="{pal["slot"]}" stroke-width="1" stroke-dasharray="4 4"/>'
+            )
+            continue
 
-    # Divider
-    dx = x0 + col_w + 8
-    out.append(
-        f'<line x1="{dx + div_w / 2}" y1="{strip_y + 8}" x2="{dx + div_w / 2}" y2="{cube_y + 36}" '
-        f'stroke="{pal["divider"]}" stroke-width="1.5" stroke-dasharray="5 4"/>'
-    )
-
-    # Mined blocks (newest nearest divider)
-    for i, b in enumerate(reversed(blocks)):
-        cx = dx + div_w + col_w / 2 + i * col_w
-        out.append(
-            f'<text x="{cx}" y="{strip_y + 14}" fill="{pal["teal"]}" font-size="13" '
-            f'font-weight="600" text-anchor="middle">{b.height}</text>'
-        )
-        _iso_cube(out, cx, cube_y, cube_s, pal["mined_top"], pal["mined_left"], pal["mined_right"])
-        reward = format_amount(sum(o.value for o in b.txs[0].outputs))
-        out.append(
-            f'<text x="{cx}" y="{cube_y + 16}" fill="{pal["ink"]}" font-size="9" '
-            f'text-anchor="middle">{reward} ROFL</text>'
-            f'<text x="{cx}" y="{cube_y + 28}" fill="{pal["dim"]}" font-size="8.5" '
-            f'text-anchor="middle">{len(b.txs)} tx &#183; @{html.escape(b.miner[:12])}</text>'
-        )
+        b = blocks[idx]
+        out.append(f'<rect x="{x}" y="{top}" width="{bw}" height="{cardh}" rx="4" '
+                   f'fill="{pal["card"]}" stroke="{pal["edge"]}" stroke-width="1"/>')
+        out.append(f'<text x="{x + 11}" y="{top + 21}" fill="{pal["accent"]}" font-size="13" '
+                   f'font-weight="700">#{b.height}</text>')
+        out.append(f'<text x="{x + 11}" y="{top + 37}" fill="{pal["ink"]}" font-size="10">'
+                   f'{b.block_hash()[:16]}&#8230;</text>')
+        out.append(f'<text x="{x + 11}" y="{top + 52}" fill="{pal["teal"]}" font-size="10.5">'
+                   f'@{html.escape(b.miner[:16])}</text>')
+        raw = b.txs[0].coinbase or ""
+        msg = html.escape(raw[:21]) + ("&#8230;" if len(raw) > 21 else "")
+        out.append(f'<text x="{x + 11}" y="{top + 66}" fill="{pal["dim"]}" font-size="9">{msg}</text>')
 
     out.append("</svg>\n")
     return "".join(out)
 
 
-def render_svg(state: ChainState, directory: str = "assets", slots: int = 5) -> None:
+def render_svg(state: ChainState, directory: str = "assets", slots: int = 6) -> None:
     """
     Write one tape per theme. GitHub selects between them with <picture>,
     which follows the site theme rather than the reader's operating system.
