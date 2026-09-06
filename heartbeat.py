@@ -72,6 +72,14 @@ FALLBACK = [
 TAG = re.compile(r"<[^>]+>")
 WS = re.compile(r"\s+")
 
+# A chapter can wrap one sentence across several lines. Anything opening with
+# one of these is the tail of a thought, not a whole one.
+CONTINUATION = {
+    "of", "and", "but", "or", "to", "in", "into", "for", "with", "that",
+    "which", "from", "as", "at", "by", "on", "than", "then", "so", "yet",
+    "because", "while", "where", "when", "through", "without", "against",
+}
+
 
 def quote() -> str:
     """One line, short enough for a coinbase, from a random chapter."""
@@ -98,7 +106,10 @@ def quote() -> str:
                 continue
             if any(ord(c) < 32 for c in line):
                 continue
-            if len(line.split()) < 6:
+            words = line.split()
+            if len(words) < 5:
+                continue
+            if words[0].lower() in CONTINUATION:
                 continue
             if not 34 <= len(line.encode()) <= MAX_MESSAGE_BYTES:
                 continue
