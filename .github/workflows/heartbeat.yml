@@ -1,0 +1,60 @@
+name: Heartbeat
+
+# Keeps block spacing near target during quiet stretches.
+#
+# Checks the tip age on a schedule. If a block has arrived recently this exits
+# immediately without doing any work. If the chain has gone stale past the
+# target spacing it mines one block at the current difficulty and commits it.
+#
+# Real miners always take precedence: they submit through the node workflow,
+# which shares this concurrency group, and any block they land resets the tip
+# age so the next scheduled check does nothing.
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: rofl-chain
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check the tip, mine if stale
+        id: beat
+        run: python3 heartbeat.py
+
+      - name: Verify the chain still replays
+        if: steps.beat.outputs.mined == 'true'
+        run: python3 verify.py
+
+      - name: Commit
+        if: steps.beat.outputs.mined == 'true'
+        run: |
+          git config user.name  "rofl-node"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add chain/ README.md assets/ 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "rofl: block ${{ steps.beat.outputs.height }}"
+          for attempt in 1 2 3; do
+            git push && exit 0
+            git pull --rebase --autostash || exit 1
+            python3 verify.py || exit 1
+          done
+          exit 1

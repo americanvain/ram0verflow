@@ -331,8 +331,8 @@ itself. This has two consequences: concurrent submissions cannot conflict,
 and no code from a fork is ever executed by a workflow holding a write token
 — the standard `pull_request_target` failure mode.
 
-Mining is performed by the submitter. Workflows validate only, which is a few
-hashes and additions and takes seconds.
+A block is mined by whoever submits it, and the miner's handle is fixed inside
+the header (§4.3), so the relay channel never has to be trusted.
 
 ## 15. Identity (not consensus)
 

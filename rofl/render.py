@@ -73,8 +73,14 @@ def render_readme_section(state: ChainState, now: int | None = None) -> str:
     out = []
     out.append(BEGIN)
     out.append("")
-    out.append(f'<img src="assets/ledger.svg?v={height}" alt="ROFL chain, height '
-               f'{height}" width="100%">')
+    out.append(
+        f'<picture>'
+        f'<source media="(prefers-color-scheme: dark)" '
+        f'srcset="assets/ledger-dark.svg?v={height}">'
+        f'<img src="assets/ledger-light.svg?v={height}" width="100%" '
+        f'alt="ROFL ledger, height {height}">'
+        f'</picture>'
+    )
     out.append("")
     out.append("| | |")
     out.append("|---|---|")
@@ -186,60 +192,75 @@ def update_readme(state: ChainState, path: str = "README.md") -> None:
 # SVG ledger tape
 # --------------------------------------------------------------------------
 
+PALETTES = {
+    "light": dict(bg="#f1f3ef", card="#ffffff", edge="#d5dbd2", ink="#121916",
+                  dim="#68746e", accent="#8a5f10", teal="#1c5b52", link="#b3bcb4",
+                  slot="#c8cec6"),
+    "dark": dict(bg="#0c1210", card="#131b17", edge="#28332e", ink="#e5e9e3",
+                 dim="#7a867f", accent="#d9a64c", teal="#5cab9b", link="#38443e",
+                 slot="#2a352f"),
+}
+
 SVG_HEAD = """<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" \
 viewBox="0 0 {w} {h}" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
-<style>
-  .bg{{fill:#f1f3ef}} .card{{fill:#ffffff;stroke:#d5dbd2}} .ink{{fill:#121916}}
-  .dim{{fill:#68746e}} .accent{{fill:#8a5f10}} .teal{{fill:#1c5b52}}
-  .link{{stroke:#b3bcb4}}
-  @media (prefers-color-scheme:dark){{
-    .bg{{fill:#0c1210}} .card{{fill:#131b17;stroke:#28332e}} .ink{{fill:#e5e9e3}}
-    .dim{{fill:#7a867f}} .accent{{fill:#d9a64c}} .teal{{fill:#5cab9b}}
-    .link{{stroke:#38443e}}
-  }}
-</style>
-<rect class="bg" width="{w}" height="{h}" rx="6"/>
+<rect fill="{bg}" width="{w}" height="{h}" rx="6"/>
 """
 
 
-def render_svg(state: ChainState, path: str = "assets/ledger.svg", count: int = 6) -> None:
-    """A small chain-of-blocks tape. Self-contained, theme-aware, no fonts loaded."""
-    blocks = state.blocks[-count:]
-    bw, gap, pad = 148, 26, 18
-    w = pad * 2 + len(blocks) * bw + (len(blocks) - 1) * gap
-    h = 132
-    parts = [SVG_HEAD.format(w=w, h=h)]
 
-    parts.append(
-        f'<text x="{pad}" y="24" class="ink" font-size="13" font-weight="700">ROFL</text>'
-        f'<text x="{pad + 46}" y="24" class="dim" font-size="11">'
-        f'height {state.height} &#183; difficulty {difficulty(state.tip.bits):,.0f}</text>'
+def _svg(state: ChainState, pal: dict, slots: int) -> str:
+    blocks = state.blocks[-slots:]
+    bw, gap, pad = 148, 26, 18
+    w = pad * 2 + slots * bw + (slots - 1) * gap
+    h = 138
+    top, cardh = 44, 76
+    out = [SVG_HEAD.format(w=w, h=h, bg=pal["bg"])]
+
+    out.append(
+        f'<text x="{pad}" y="26" fill="{pal["ink"]}" font-size="15" font-weight="700">ROFL</text>'
+        f'<text x="{pad + 54}" y="26" fill="{pal["dim"]}" font-size="12.5">'
+        f'height {state.height} &#183; difficulty {difficulty(state.tip.bits):,.0f} &#183; '
+        f'{state.tip.puzzles()} puzzles per block</text>'
     )
 
-    for idx, b in enumerate(blocks):
-        x = pad + idx * (bw + gap)
-        y = 40
-        if idx:
-            lx = x - gap
-            parts.append(
-                f'<line x1="{lx}" y1="{y + 32}" x2="{x}" y2="{y + 32}" '
-                f'class="link" stroke-width="1.5" stroke-dasharray="3 3"/>'
+    for slot in range(slots):
+        x = pad + slot * (bw + gap)
+        idx = slot - (slots - len(blocks))
+        if slot:
+            out.append(
+                f'<line x1="{x - gap}" y1="{top + cardh / 2}" x2="{x}" y2="{top + cardh / 2}" '
+                f'stroke="{pal["link"]}" stroke-width="1.5" stroke-dasharray="3 3"/>'
             )
-        parts.append(f'<rect class="card" x="{x}" y="{y}" width="{bw}" height="{h - y - 14}" '
-                     f'rx="4" stroke-width="1"/>')
-        parts.append(f'<text x="{x + 10}" y="{y + 20}" class="accent" font-size="12" '
-                     f'font-weight="700">#{b.height}</text>')
-        parts.append(f'<text x="{x + 10}" y="{y + 38}" class="ink" font-size="9.5">'
-                     f'{b.block_hash()[:18]}&#8230;</text>')
-        parts.append(f'<text x="{x + 10}" y="{y + 54}" class="teal" font-size="10">'
-                     f'@{html.escape(b.miner[:15])}</text>')
-        msg = html.escape((b.txs[0].coinbase or "")[:18])
-        parts.append(f'<text x="{x + 10}" y="{y + 70}" class="dim" font-size="9">{msg}</text>')
-        ntx = len(b.txs)
-        parts.append(f'<text x="{x + 10}" y="{y + 84}" class="dim" font-size="9">'
-                     f'{ntx} tx &#183; {b.puzzles()} puzzles</text>')
+        if idx < 0:
+            out.append(
+                f'<rect x="{x}" y="{top}" width="{bw}" height="{cardh}" rx="4" fill="none" '
+                f'stroke="{pal["slot"]}" stroke-width="1" stroke-dasharray="4 4"/>'
+            )
+            continue
 
-    parts.append("</svg>\n")
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write("".join(parts))
+        b = blocks[idx]
+        out.append(f'<rect x="{x}" y="{top}" width="{bw}" height="{cardh}" rx="4" '
+                   f'fill="{pal["card"]}" stroke="{pal["edge"]}" stroke-width="1"/>')
+        out.append(f'<text x="{x + 11}" y="{top + 21}" fill="{pal["accent"]}" font-size="13" '
+                   f'font-weight="700">#{b.height}</text>')
+        out.append(f'<text x="{x + 11}" y="{top + 37}" fill="{pal["ink"]}" font-size="10">'
+                   f'{b.block_hash()[:16]}&#8230;</text>')
+        out.append(f'<text x="{x + 11}" y="{top + 52}" fill="{pal["teal"]}" font-size="10.5">'
+                   f'@{html.escape(b.miner[:16])}</text>')
+        raw = b.txs[0].coinbase or ""
+        msg = html.escape(raw[:21]) + ("&#8230;" if len(raw) > 21 else "")
+        out.append(f'<text x="{x + 11}" y="{top + 66}" fill="{pal["dim"]}" font-size="9">{msg}</text>')
+
+    out.append("</svg>\n")
+    return "".join(out)
+
+
+def render_svg(state: ChainState, directory: str = "assets", slots: int = 6) -> None:
+    """
+    Write one tape per theme. GitHub selects between them with <picture>,
+    which follows the site theme rather than the reader's operating system.
+    """
+    os.makedirs(directory, exist_ok=True)
+    for name, pal in PALETTES.items():
+        with open(os.path.join(directory, f"ledger-{name}.svg"), "w", encoding="utf-8") as fh:
+            fh.write(_svg(state, pal, slots))

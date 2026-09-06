@@ -17,7 +17,7 @@
 
 <!-- ROFL:BEGIN -->
 
-<img src="assets/ledger.svg?v=0" alt="ROFL chain, height 0" width="100%">
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=0"><img src="assets/ledger-light.svg?v=0" width="100%" alt="ROFL ledger, height 0"></picture>
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
-| `0` | `c2350ac17ef26d131b23…` | [@ram0verflow](https://github.com/ram0verflow) | `in bitcoin, we have discovered not just sound money, but the technological foundation of human liberty. a tool that makes freedom not just possible but practical, not just desirable but inevitable.` | `1` | `50.00000000` | 8s ago |
+| `0` | `c2350ac17ef26d131b23…` | [@ram0verflow](https://github.com/ram0verflow) | `in bitcoin, we have discovered not just sound money, but the technological foundation of human liberty. a tool that makes freedom not just possible but practical, not just desirable but inevitable.` | `1` | `50.00000000` | 24m ago |
 
 ### Miners
 
@@ -59,9 +59,6 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 ## What this is
 
-Someone built Doom into a README. This is the other idea: a chain with real
-consensus rules, where the ledger *is* the profile page.
-
 Everything here is real except the money. Coins move in UTXOs, spent by ECDSA
 signatures over secp256k1 — the same curve Bitcoin uses, with RFC 6979
 deterministic nonces and low-s enforcement. Difficulty retargets every 16
@@ -83,9 +80,6 @@ deliberately plain, and beating it is the entire sport.
 
 The full rules, the measurements behind every constant, and each place this
 knowingly diverges from Bitcoin, are in [SPEC.md](SPEC.md).
-
-**Mining happens on your machine, never on GitHub's.** The workflows only
-validate — a few hashes and additions, done in seconds.
 
 ## Mine a block
 
@@ -206,21 +200,22 @@ submit.py            what the workflow runs
 SPEC.md              the consensus rules
 ```
 
-## Honest limitations
+## Limitations
 
-There is one writer — this repository — so there are no reorgs. Two miners
-who solve the same height race on submission time, and the loser is told the
-new tip.
+One writer, so no reorgs. Two miners who solve the same height race on
+submission time; the loser is handed the new tip and mines again.
 
-The reference solver is pure Python and wants about 200 MB while it works.
-That is the memory wall meet-in-the-middle runs into, and it is the reason
-difficulty scales by puzzle count rather than puzzle size. A chain whose ledger lives in one person's repo ultimately trusts
-that person not to rewrite it; proof of work makes a rewrite *detectable* to
-anyone holding an earlier copy, not impossible. [§13 and §15](SPEC.md) say so
-plainly rather than pretending otherwise.
+The reference solver is pure Python and wants about 200 MB while it runs.
+That is the memory wall meet-in-the-middle hits, and the reason difficulty
+scales by puzzle count instead of puzzle size.
 
-ROFL coins are worth nothing and always will be. The wallet writes a private
-key to `rofl-wallet.json` in plain text — never reuse that key anywhere real.
+Proof of work makes a rewritten history detectable to anyone holding an
+earlier copy. It does not make one impossible. This chain lives in a single
+repository and is exactly as durable as that. [SPEC.md](SPEC.md) §13 and §16
+say the same thing in more detail.
+
+ROFL coins are worth nothing and always will be. `rofl-wallet.json` holds a
+private key in plain text — never reuse it anywhere that matters.
 
 ## License
 
