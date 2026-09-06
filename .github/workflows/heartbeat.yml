@@ -14,6 +14,9 @@ on:
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
+  # Backup when cron is delayed on a new repo — any push re-checks tip age.
+  push:
+    branches: [main]
 
 concurrency:
   group: rofl-chain

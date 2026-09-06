@@ -546,6 +546,8 @@ youBtn.onclick = () => {
 };
 try { paintYou(); } catch { youBtn.textContent = "set your handle"; }
 window.addEventListener("hashchange", route);
+// Relative times are computed at render; tick so "4s ago" doesn't freeze on screen.
+setInterval(() => { if (STATE && !document.hidden) route(); }, 30000);
 load();
 </script>
 </body>

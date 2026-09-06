@@ -35,8 +35,8 @@
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
-| `1` | `1678489448fae12bf9b4…` | [@ram0verflow](https://github.com/ram0verflow) | `of human potential into transferable form` | `1` | `50.00000000` | 4s ago |
-| `0` | `c2350ac17ef26d131b23…` | [@ram0verflow](https://github.com/ram0verflow) | `in bitcoin, we have discovered not just sound money, but the technological foundation of human liberty. a tool that makes freedom not just possible but practical, not just desirable but inevitable.` | `1` | `50.00000000` | 24m ago |
+| `1` | `1678489448fae12bf9b4…` | [@ram0verflow](https://github.com/ram0verflow) | `of human potential into transferable form` | `1` | `50.00000000` | 2026-09-06 06:30 UTC |
+| `0` | `c2350ac17ef26d131b23…` | [@ram0verflow](https://github.com/ram0verflow) | `in bitcoin, we have discovered not just sound money, but the technological foundation of human liberty. a tool that makes freedom not just possible but practical, not just desirable but inevitable.` | `1` | `50.00000000` | 2026-09-06 06:06 UTC |
 
 ### Miners
 

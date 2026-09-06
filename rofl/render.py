@@ -8,7 +8,6 @@ other word in it is hand-written and is never touched.
 import html
 import json
 import os
-import time
 
 from .chain import ChainState, emitted_supply
 from .consensus import (
@@ -28,15 +27,11 @@ END = "<!-- ROFL:END -->"
 RECENT = 10
 
 
-def _ago(ts: int, now: int) -> str:
-    d = max(0, now - ts)
-    if d < 90:
-        return f"{d}s ago"
-    if d < 5400:
-        return f"{d // 60}m ago"
-    if d < 172800:
-        return f"{d // 3600}h ago"
-    return f"{d // 86400}d ago"
+def _when(ts: int) -> str:
+    """Absolute UTC time — README is static, so relative 'ago' would freeze."""
+    from datetime import datetime, timezone
+
+    return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
 def load_registry():
@@ -58,8 +53,7 @@ def _who(address: str, by_address) -> str:
     return f"`{address[:16]}…`"
 
 
-def render_readme_section(state: ChainState, now: int | None = None) -> str:
-    now = now or int(time.time())
+def render_readme_section(state: ChainState) -> str:
     registry = load_registry()
     by_address = {v["address"]: h for h, v in registry.items()}
     tip = state.tip
@@ -107,7 +101,7 @@ def render_readme_section(state: ChainState, now: int | None = None) -> str:
         out.append(
             f"| `{b.height}` | `{b.block_hash()[:20]}…` | "
             f"[@{b.miner}](https://github.com/{b.miner}) | {msg} | "
-            f"`{len(b.txs)}` | `{reward}` | {_ago(b.timestamp, now)} |"
+            f"`{len(b.txs)}` | `{reward}` | {_when(b.timestamp)} |"
         )
     out.append("")
 
