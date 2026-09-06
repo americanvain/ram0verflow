@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=15"><img src="assets/ledger-light.svg?v=15" width="100%" alt="ROFL ledger, height 15"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=16"><img src="assets/ledger-light.svg?v=16" width="100%" alt="ROFL ledger, height 16"></picture>
 
 | | |
 |---|---|
-| **height** | `15` |
-| **tip** | `18fe58adfb02a1a511abbf921d757eb6407d187d78160bf48b6497b87907ea2b` |
-| **difficulty** | `16.0`  (bits `0x1e010000`) |
-| **chainwork** | `268,435,440` expected hashes |
-| **supply** | `800.00000000 ROFL` in `15` unspent outputs |
+| **height** | `16` |
+| **tip** | `73d82e2156190217c51849197da4f28940b135dd32687c8f0b24b6019e0787ac` |
+| **difficulty** | `8.2`  (bits `0x1e01f651`) |
+| **chainwork** | `276,985,762` expected hashes |
+| **supply** | `850.00000000 ROFL` in `16` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `16` block(s) |
-| **next halving** | in `194` block(s) |
-| **transactions** | `17` |
+| **next retarget** | in `15` block(s) |
+| **next halving** | in `193` block(s) |
+| **transactions** | `18` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `16` | `73d82e2156190217c518…` | [@axewhyzed](https://github.com/axewhyzed) | `axewhyzed` | `1` | `50.00000000` | 2026-09-06 11:25 UTC |
 | `15` | `18fe58adfb02a1a511ab…` | [@ram0verflow](https://github.com/ram0verflow) | `value constantly eroded by money printing` | `1` | `50.00000000` | 2026-09-06 11:20 UTC |
 | `14` | `b5a51f188094b84ef2a8…` | [@ram0verflow](https://github.com/ram0verflow) | `the failure of any single property compromises the entire system` | `1` | `50.00000000` | 2026-09-06 11:00 UTC |
 | `13` | `48f244ed93e53f16f2ae…` | [@ram0verflow](https://github.com/ram0verflow) | `language is the exchange of meaning` | `1` | `50.00000000` | 2026-09-06 10:50 UTC |
@@ -44,14 +45,14 @@
 | `9` | `245f43f62101181c29cc…` | [@ram0verflow](https://github.com/ram0verflow) | `still waiting on coinbase maturity` | `1` | `50.00000000` | 2026-09-06 09:11 UTC |
 | `8` | `bb1b89b9170a9487696b…` | [@ram0verflow](https://github.com/ram0verflow) | `maturing coinbase for a transfer` | `1` | `50.00000000` | 2026-09-06 09:09 UTC |
 | `7` | `74c9cc8971777732521a…` | [@ram0verflow](https://github.com/ram0verflow) | `value exists because we cannot have everything` | `1` | `50.00000000` | 2026-09-06 08:43 UTC |
-| `6` | `16bd0a34117b3ca44014…` | [@ram0verflow](https://github.com/ram0verflow) | `uneven distribution of new money is inflation` | `1` | `50.00000000` | 2026-09-06 08:41 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `15` | `93.8%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `6.2%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `15` | `88.2%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `5.9%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `5.9%` |
 
 ### Balances
 
@@ -61,6 +62,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |---|---|--:|
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `650.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
+| _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
 ### Recent transfers
 
@@ -68,7 +70,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 15. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 16. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
