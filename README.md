@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=8"><img src="assets/ledger-light.svg?v=8" width="100%" alt="ROFL ledger, height 8"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=9"><img src="assets/ledger-light.svg?v=9" width="100%" alt="ROFL ledger, height 9"></picture>
 
 | | |
 |---|---|
-| **height** | `8` |
-| **tip** | `bb1b89b9170a9487696b67f2c816495ed1020b6ea21d056c7067decae1f0d6ab` |
+| **height** | `9` |
+| **tip** | `245f43f62101181c29ccfca6a3029f8210a395bf253d04413e1afc62159320f6` |
 | **difficulty** | `16.0`  (bits `0x1e010000`) |
-| **chainwork** | `150,994,935` expected hashes |
-| **supply** | `450.00000000 ROFL` in `9` unspent outputs |
+| **chainwork** | `167,772,150` expected hashes |
+| **supply** | `500.00000000 ROFL` in `10` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `7` block(s) |
-| **next halving** | in `201` block(s) |
-| **transactions** | `9` |
+| **next retarget** | in `6` block(s) |
+| **next halving** | in `200` block(s) |
+| **transactions** | `10` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `9` | `245f43f62101181c29cc…` | [@ram0verflow](https://github.com/ram0verflow) | `still waiting on coinbase maturity` | `1` | `50.00000000` | 2026-09-06 09:11 UTC |
 | `8` | `bb1b89b9170a9487696b…` | [@ram0verflow](https://github.com/ram0verflow) | `maturing coinbase for a transfer` | `1` | `50.00000000` | 2026-09-06 09:09 UTC |
 | `7` | `74c9cc8971777732521a…` | [@ram0verflow](https://github.com/ram0verflow) | `value exists because we cannot have everything` | `1` | `50.00000000` | 2026-09-06 08:43 UTC |
 | `6` | `16bd0a34117b3ca44014…` | [@ram0verflow](https://github.com/ram0verflow) | `uneven distribution of new money is inflation` | `1` | `50.00000000` | 2026-09-06 08:41 UTC |
@@ -49,8 +50,8 @@
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `8` | `88.9%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `11.1%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `9` | `90.0%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `10.0%` |
 
 ### Balances
 
@@ -58,10 +59,10 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `400.00000000 ROFL` |
+| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `450.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `50.00000000 ROFL` |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 8. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 9. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
