@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=44"><img src="assets/ledger-light.svg?v=44" width="100%" alt="ROFL ledger, height 44"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=45"><img src="assets/ledger-light.svg?v=45" width="100%" alt="ROFL ledger, height 45"></picture>
 
 | | |
 |---|---|
-| **height** | `44` |
-| **tip** | `34fd39df6738037b5b3157655ca63f387eaa36afe4d166b7ed56186e95693d3b` |
+| **height** | `45` |
+| **tip** | `b4237c5458d2080bd838b5864e24fe72214da026620e0d1e30e988ca56573a9a` |
 | **difficulty** | `3.8`  (bits `0x1e043a8b`) |
-| **chainwork** | `456,817,819` expected hashes |
-| **supply** | `2250.00000000 ROFL` in `44` unspent outputs |
+| **chainwork** | `460,785,298` expected hashes |
+| **supply** | `2300.00000000 ROFL` in `45` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `3` block(s) |
-| **next halving** | in `165` block(s) |
-| **transactions** | `46` |
+| **next retarget** | in `2` block(s) |
+| **next halving** | in `164` block(s) |
+| **transactions** | `47` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `45` | `b4237c5458d2080bd838…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:26 UTC |
 | `44` | `34fd39df6738037b5b31…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:25 UTC |
 | `43` | `243d7904099838f63bdc…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:25 UTC |
 | `42` | `0c2b98001ecc58970322…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:25 UTC |
@@ -44,14 +45,13 @@
 | `38` | `f2cff225b1718a154556…` | [@ram0verflow](https://github.com/ram0verflow) | `subdivision without loss of properties` | `1` | `50.00000000` | 2026-09-06 19:35 UTC |
 | `37` | `adde5d7242af6b628c30…` | [@ram0verflow](https://github.com/ram0verflow) | `66 countries have already lost their currency privileges` | `1` | `50.00000000` | 2026-09-06 19:00 UTC |
 | `36` | `69168f17a4d27583a6d9…` | [@ram0verflow](https://github.com/ram0verflow) | `this creates a perfect asymptotic curve approaching 21 million` | `1` | `50.00000000` | 2026-09-06 18:40 UTC |
-| `35` | `e136ad289ddc3b6fc5af…` | [@ram0verflow](https://github.com/ram0verflow) | `salable across space (borderless transfer)` | `1` | `50.00000000` | 2026-09-06 18:20 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `82.2%` |
-| [@ksanjeev284](https://github.com/ksanjeev284) | `6` | `13.3%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `80.4%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `7` | `15.2%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `2.2%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `2.2%` |
 
@@ -62,7 +62,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | holder | address | balance |
 |---|---|--:|
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `300.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `350.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 44. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 45. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
