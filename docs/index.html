@@ -58,7 +58,45 @@
     margin:30px 0 12px;font-weight:600;display:flex;align-items:baseline;gap:10px}
   h2 em{font-style:normal;color:var(--dim2);letter-spacing:0;text-transform:none;font-size:12px}
 
-  /* block strip */
+  /* mempool.space-style block stream */
+  .mp-stream{margin-top:14px;background:var(--panel);border:1px solid var(--line);
+    border-radius:6px;padding:18px 14px 16px;overflow:hidden}
+  .mp-stream-inner{display:flex;align-items:flex-end;gap:0;overflow-x:auto;padding-bottom:4px}
+  .mp-side{display:flex;align-items:flex-end;gap:10px;flex-shrink:0}
+  .mp-side.pending{padding-right:6px}
+  .mp-side.mined{padding-left:6px}
+  .mp-divider{flex:0 0 28px;align-self:stretch;display:flex;justify-content:center;
+    margin:0 4px}
+  .mp-divider::before{content:"";width:0;border-left:2px dashed var(--line2);
+    height:calc(100% - 8px);margin-top:8px}
+  .mp-cell{flex:0 0 108px;text-align:center;color:inherit;text-decoration:none}
+  .mp-cell:hover .mp-cube{transform:translateY(-3px)}
+  .mp-height{font-size:15px;font-weight:600;color:var(--teal);margin:0 0 10px;
+    font-variant-numeric:tabular-nums}
+  .mp-height.pending{color:var(--brass)}
+  .mp-cube{width:56px;height:56px;margin:0 auto 10px;position:relative;
+    transition:transform .15s ease}
+  .mp-cube .f{position:absolute;width:56px;height:56px;border:1px solid rgba(255,255,255,.05)}
+  .mp-cube .top{transform:rotateX(90deg) translateZ(28px);background:var(--cube-top)}
+  .mp-cube .front{transform:translateZ(28px);background:var(--cube-front)}
+  .mp-cube .right{transform:rotateY(90deg) translateZ(28px);background:var(--cube-right)}
+  .mp-scene{width:70px;height:72px;margin:0 auto;perspective:280px;
+    transform-style:preserve-3d}
+  .mp-cube-inner{width:56px;height:56px;position:relative;transform-style:preserve-3d;
+    transform:rotateX(-22deg) rotateY(32deg);margin:0 auto}
+  .mp-meta{font-size:10px;line-height:1.45;color:var(--dim);min-height:42px}
+  .mp-meta b{color:var(--ink);font-weight:600;display:block;font-size:10.5px}
+  .mp-meta .pool{color:var(--teal);margin-top:4px;font-size:10px}
+  .mp-cube.pending .mp-cube-inner{--cube-top:var(--pending-top);--cube-front:var(--pending-front);
+    --cube-right:var(--pending-right)}
+  .mp-cube.mined .mp-cube-inner{--cube-top:var(--mined-top);--cube-front:var(--mined-front);
+    --cube-right:var(--mined-right)}
+  :root{
+    --pending-top:#d9a64c;--pending-front:#b8863a;--pending-right:#8a6a2a;
+    --mined-top:#6ec4b0;--mined-front:#3d8f7c;--mined-right:#1f4a42;
+  }
+
+  /* block strip (compact list below stream) */
   .strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px}
   .blk{flex:0 0 156px;min-width:0;background:linear-gradient(160deg,var(--panel2),var(--panel));
     border:1px solid var(--line2);border-radius:4px;padding:11px 12px;text-align:left;
@@ -232,6 +270,52 @@ function statsRow() {
   </div>`;
 }
 
+function mempoolStream() {
+  const tip = STATE.tip;
+  const tipAge = Math.max(0, Math.floor(Date.now() / 1000) - tip.timestamp);
+  const staleIn = Math.max(0, TARGET_SPACING - tipAge);
+  const staleLabel = staleIn > 0
+    ? `In ~${staleIn >= 3600 ? Math.ceil(staleIn / 3600) + "h" : Math.ceil(staleIn / 60) + "m"}`
+    : "Stale now";
+
+  const cube = (kind) => `<div class="mp-scene"><div class="mp-cube ${kind}"><div class="mp-cube-inner">
+    <div class="f top"></div><div class="f front"></div><div class="f right"></div></div></div>`;
+
+  const pendingCells = [];
+  if (MEMPOOL.length) {
+    const total = MEMPOOL.reduce((a, t) =>
+      a + t.outputs.reduce((x, o) => x + BigInt(o.value), 0n), 0n);
+    pendingCells.push(`<a class="mp-cell" href="#/">
+      <div class="mp-height pending">mempool</div>
+      ${cube("pending")}
+      <div class="mp-meta"><b>${fmtAmount(total)} ROFL</b>${MEMPOOL.length} transaction(s)<span class="pool">waiting to mine</span></div>
+    </a>`);
+  }
+  pendingCells.push(`<div class="mp-cell">
+    <div class="mp-height pending">next</div>
+    ${cube("pending")}
+    <div class="mp-meta"><b>${staleLabel}</b>target ${TARGET_SPACING / 60}m spacing<span class="pool">heartbeat when stale</span></div>
+  </div>`);
+
+  const mined = STATE.blocks.slice(-8).reverse();
+  const minedCells = mined.map(b => {
+    const cb = b.txs[0];
+    const reward = fmtAmount(cb.outputs.reduce((a, o) => a + BigInt(o.value), 0n));
+    const k = kForWork(targetToWork(bitsToTarget(b.bits)));
+    return `<a class="mp-cell" href="#/block/${b.height}">
+      <div class="mp-height">${b.height}</div>
+      ${cube("mined")}
+      <div class="mp-meta"><b>${reward} ROFL</b>${b.txs.length} transaction${b.txs.length === 1 ? "" : "s"}<span class="pool">@${esc(b.miner)} · ${ago(b.timestamp)} · ${k}p</span></div>
+    </a>`;
+  }).join("");
+
+  return `<div class="mp-stream"><div class="mp-stream-inner">
+    <div class="mp-side pending">${pendingCells.join("")}</div>
+    <div class="mp-divider" aria-hidden="true"></div>
+    <div class="mp-side mined">${minedCells}</div>
+  </div></div>`;
+}
+
 function blockStrip() {
   const list = STATE.blocks.slice(-14).reverse();
   return `<h2>Blocks <em>newest first</em></h2><div class="strip">` + list.map(b => {
@@ -350,7 +434,7 @@ function balancesPanel() {
 
 /* ---------------- views ---------------- */
 function home() {
-  app.innerHTML = banner() + statsRow() + blockStrip() + mempoolPanel() +
+  app.innerHTML = banner() + mempoolStream() + statsRow() + blockStrip() + mempoolPanel() +
     youPanel() + chartsPanel() + minersPanel() + balancesPanel() + foot();
   const vb = document.getElementById("verifyAll");
   if (vb) vb.onclick = verifyAll;
