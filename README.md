@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=19"><img src="assets/ledger-light.svg?v=19" width="100%" alt="ROFL ledger, height 19"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=20"><img src="assets/ledger-light.svg?v=20" width="100%" alt="ROFL ledger, height 20"></picture>
 
 | | |
 |---|---|
-| **height** | `19` |
-| **tip** | `3e8ea96ed0c4f7ee8decb263862f1df63fc54717cd7c12bc97be7c4cba535959` |
+| **height** | `20` |
+| **tip** | `76fe058cbb55604f1797277c6317487883d3ebd4a3ca1ee899d2ddfe2e669920` |
 | **difficulty** | `8.2`  (bits `0x1e01f651`) |
-| **chainwork** | `302,636,728` expected hashes |
-| **supply** | `1000.00000000 ROFL` in `19` unspent outputs |
+| **chainwork** | `311,187,050` expected hashes |
+| **supply** | `1050.00000000 ROFL` in `20` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `12` block(s) |
-| **next halving** | in `190` block(s) |
-| **transactions** | `21` |
+| **next retarget** | in `11` block(s) |
+| **next halving** | in `189` block(s) |
+| **transactions** | `22` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `20` | `76fe058cbb55604f1797…` | [@ram0verflow](https://github.com/ram0verflow) | `this isn&#x27;t just a tendency - it&#x27;s a fundamental law of reality itself` | `1` | `50.00000000` | 2026-09-06 12:50 UTC |
 | `19` | `3e8ea96ed0c4f7ee8dec…` | [@ram0verflow](https://github.com/ram0verflow) | `language is the exchange of meaning` | `1` | `50.00000000` | 2026-09-06 12:30 UTC |
 | `18` | `57e2be4785f1cc9f2d67…` | [@ram0verflow](https://github.com/ram0verflow) | `the failure of any single property compromises the entire system` | `1` | `50.00000000` | 2026-09-06 12:19 UTC |
 | `17` | `d00275194dd703cd5e83…` | [@ram0verflow](https://github.com/ram0verflow) | `traditional forms of money are subject to human control and manipulation` | `1` | `50.00000000` | 2026-09-06 12:00 UTC |
@@ -44,15 +45,14 @@
 | `13` | `48f244ed93e53f16f2ae…` | [@ram0verflow](https://github.com/ram0verflow) | `language is the exchange of meaning` | `1` | `50.00000000` | 2026-09-06 10:50 UTC |
 | `12` | `8c9f89d9678b96ff16ff…` | [@ram0verflow](https://github.com/ram0verflow) | `66 countries have already lost their currency privileges` | `1` | `50.00000000` | 2026-09-06 10:30 UTC |
 | `11` | `787a8a6ec94622ff492b…` | [@ram0verflow](https://github.com/ram0verflow) | `first transfer: 100 ROFL to notram0verflow` | `2` | `50.00000000` | 2026-09-06 09:42 UTC |
-| `10` | `fdaf1c568c2edec78575…` | [@ram0verflow](https://github.com/ram0verflow) | `one more block until coinbases mature` | `1` | `50.00000000` | 2026-09-06 09:37 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `18` | `90.0%` |
-| [@axewhyzed](https://github.com/axewhyzed) | `1` | `5.0%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `5.0%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `19` | `90.5%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `4.8%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `4.8%` |
 
 ### Balances
 
@@ -60,7 +60,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `800.00000000 ROFL` |
+| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `850.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
@@ -70,7 +70,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 19. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 20. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
