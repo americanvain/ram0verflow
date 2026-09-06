@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=221"><img src="assets/ledger-light.svg?v=221" width="100%" alt="ROFL ledger, height 221"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=222"><img src="assets/ledger-light.svg?v=222" width="100%" alt="ROFL ledger, height 222"></picture>
 
 | | |
 |---|---|
-| **height** | `221` |
-| **tip** | `49b9081fe76d614e664fb5823e7ef4a97faa837f942b3eee3fc58f9d25c4471d` |
+| **height** | `222` |
+| **tip** | `43ef697bddc9d0c61e9a667d096db8f230a80de17703083904ce56e42d064d40` |
 | **difficulty** | `3,589,468.5`  (bits `0x1b4ac8c0`) |
-| **chainwork** | `72,767,839,316,754` expected hashes |
-| **supply** | `10800.00000000 ROFL` in `221` unspent outputs |
+| **chainwork** | `76,531,669,820,569` expected hashes |
+| **supply** | `10825.00000000 ROFL` in `222` unspent outputs |
 | **next reward** | `25.00000000 ROFL` |
-| **next retarget** | in `2` block(s) |
-| **next halving** | in `198` block(s) |
-| **transactions** | `223` |
+| **next retarget** | in `1` block(s) |
+| **next halving** | in `197` block(s) |
+| **transactions** | `224` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `222` | `43ef697bddc9d0c61e9a…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:59 UTC |
 | `221` | `49b9081fe76d614e664f…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:58 UTC |
 | `220` | `228776972f93434808d0…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:58 UTC |
 | `219` | `65ada5557ff71b071397…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:57 UTC |
@@ -44,16 +45,15 @@
 | `215` | `6c790e0ba5e4a1da135c…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:53 UTC |
 | `214` | `026c73a9a55c9805731d…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:53 UTC |
 | `213` | `372e807367ce3e6be1e0…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:52 UTC |
-| `212` | `8416601a70d33c7e52e2…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 21:51 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `183` | `82.4%` |
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `16.7%` |
-| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.5%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.5%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `184` | `82.5%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `16.6%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.4%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.4%` |
 
 ### Balances
 
@@ -61,7 +61,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `8850.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `8875.00000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 221. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 222. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
