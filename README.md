@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=330"><img src="assets/ledger-light.svg?v=330" width="100%" alt="ROFL ledger, height 330"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=331"><img src="assets/ledger-light.svg?v=331" width="100%" alt="ROFL ledger, height 331"></picture>
 
 | | |
 |---|---|
-| **height** | `330` |
-| **tip** | `8043d83318ca6889c8cf69fc28c825e4ff57c0b7f2a8996abf0e94528f6759ad` |
+| **height** | `331` |
+| **tip** | `4e9d9cfbf549f05dd190154523fab65697ebd150bdeb4373882fb66be5ca99cd` |
 | **difficulty** | `58,809,851,622.1`  (bits `0x1a012b23`) |
-| **chainwork** | `1,007,221,117,033,376,952` expected hashes |
-| **supply** | `13525.00000000 ROFL` in `330` unspent outputs |
+| **chainwork** | `1,068,887,716,007,895,360` expected hashes |
+| **supply** | `13550.00000000 ROFL` in `331` unspent outputs |
 | **next reward** | `25.00000000 ROFL` |
-| **next retarget** | in `5` block(s) |
-| **next halving** | in `89` block(s) |
-| **transactions** | `332` |
+| **next retarget** | in `4` block(s) |
+| **next halving** | in `88` block(s) |
+| **transactions** | `333` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `331` | `4e9d9cfbf549f05dd190…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:57 UTC |
 | `330` | `8043d83318ca6889c8cf…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:56 UTC |
 | `329` | `c90beb160b917dd44668…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:55 UTC |
 | `328` | `59624a4ff3a1a9d60574…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:53 UTC |
@@ -44,14 +45,13 @@
 | `324` | `4226c9cbf23cb7be104e…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:48 UTC |
 | `323` | `9290109e5e51c6db72ce…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:46 UTC |
 | `322` | `42a6e3780588f5c969fe…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:44 UTC |
-| `321` | `84c0f9b77ecab6e192cb…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-06 23:43 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `292` | `88.2%` |
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `11.2%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `293` | `88.3%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `11.1%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.3%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.3%` |
 
@@ -61,7 +61,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `11575.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `11600.00000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 330. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 331. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
