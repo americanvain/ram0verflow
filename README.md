@@ -17,31 +17,32 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=0"><img src="assets/ledger-light.svg?v=0" width="100%" alt="ROFL ledger, height 0"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1"><img src="assets/ledger-light.svg?v=1" width="100%" alt="ROFL ledger, height 1"></picture>
 
 | | |
 |---|---|
-| **height** | `0` |
-| **tip** | `c2350ac17ef26d131b234a5ec5ceffe069fb4ef1aa02bb37ff21be522166ebe1` |
+| **height** | `1` |
+| **tip** | `1678489448fae12bf9b4844e572e4d3f04572f02378454f1d7ffa02d6c6e9b90` |
 | **difficulty** | `16.0`  (bits `0x1e010000`) |
-| **chainwork** | `16,777,215` expected hashes |
-| **supply** | `50.00000000 ROFL` in `1` unspent outputs |
+| **chainwork** | `33,554,430` expected hashes |
+| **supply** | `100.00000000 ROFL` in `2` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `15` block(s) |
-| **next halving** | in `209` block(s) |
-| **transactions** | `1` |
+| **next retarget** | in `14` block(s) |
+| **next halving** | in `208` block(s) |
+| **transactions** | `2` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `1` | `1678489448fae12bf9b4…` | [@ram0verflow](https://github.com/ram0verflow) | `of human potential into transferable form` | `1` | `50.00000000` | 4s ago |
 | `0` | `c2350ac17ef26d131b23…` | [@ram0verflow](https://github.com/ram0verflow) | `in bitcoin, we have discovered not just sound money, but the technological foundation of human liberty. a tool that makes freedom not just possible but practical, not just desirable but inevitable.` | `1` | `50.00000000` | 24m ago |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `1` | `100.0%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `2` | `100.0%` |
 
 ### Balances
 
@@ -49,9 +50,9 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `50.00000000 ROFL` |
+| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `100.00000000 ROFL` |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 0. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 1. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
