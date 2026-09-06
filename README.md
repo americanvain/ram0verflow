@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=16"><img src="assets/ledger-light.svg?v=16" width="100%" alt="ROFL ledger, height 16"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=17"><img src="assets/ledger-light.svg?v=17" width="100%" alt="ROFL ledger, height 17"></picture>
 
 | | |
 |---|---|
-| **height** | `16` |
-| **tip** | `73d82e2156190217c51849197da4f28940b135dd32687c8f0b24b6019e0787ac` |
+| **height** | `17` |
+| **tip** | `d00275194dd703cd5e83e07fa3de0fae6ca5fc36a14ea44cb6b8f885475d8d8d` |
 | **difficulty** | `8.2`  (bits `0x1e01f651`) |
-| **chainwork** | `276,985,762` expected hashes |
-| **supply** | `850.00000000 ROFL` in `16` unspent outputs |
+| **chainwork** | `285,536,084` expected hashes |
+| **supply** | `900.00000000 ROFL` in `17` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `15` block(s) |
-| **next halving** | in `193` block(s) |
-| **transactions** | `18` |
+| **next retarget** | in `14` block(s) |
+| **next halving** | in `192` block(s) |
+| **transactions** | `19` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `17` | `d00275194dd703cd5e83…` | [@ram0verflow](https://github.com/ram0verflow) | `traditional forms of money are subject to human control and manipulation` | `1` | `50.00000000` | 2026-09-06 12:00 UTC |
 | `16` | `73d82e2156190217c518…` | [@axewhyzed](https://github.com/axewhyzed) | `axewhyzed` | `1` | `50.00000000` | 2026-09-06 11:25 UTC |
 | `15` | `18fe58adfb02a1a511ab…` | [@ram0verflow](https://github.com/ram0verflow) | `value constantly eroded by money printing` | `1` | `50.00000000` | 2026-09-06 11:20 UTC |
 | `14` | `b5a51f188094b84ef2a8…` | [@ram0verflow](https://github.com/ram0verflow) | `the failure of any single property compromises the entire system` | `1` | `50.00000000` | 2026-09-06 11:00 UTC |
@@ -44,15 +45,14 @@
 | `10` | `fdaf1c568c2edec78575…` | [@ram0verflow](https://github.com/ram0verflow) | `one more block until coinbases mature` | `1` | `50.00000000` | 2026-09-06 09:37 UTC |
 | `9` | `245f43f62101181c29cc…` | [@ram0verflow](https://github.com/ram0verflow) | `still waiting on coinbase maturity` | `1` | `50.00000000` | 2026-09-06 09:11 UTC |
 | `8` | `bb1b89b9170a9487696b…` | [@ram0verflow](https://github.com/ram0verflow) | `maturing coinbase for a transfer` | `1` | `50.00000000` | 2026-09-06 09:09 UTC |
-| `7` | `74c9cc8971777732521a…` | [@ram0verflow](https://github.com/ram0verflow) | `value exists because we cannot have everything` | `1` | `50.00000000` | 2026-09-06 08:43 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `15` | `88.2%` |
-| [@axewhyzed](https://github.com/axewhyzed) | `1` | `5.9%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `5.9%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `16` | `88.9%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `5.6%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `5.6%` |
 
 ### Balances
 
@@ -60,7 +60,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `650.00000000 ROFL` |
+| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `700.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
@@ -70,7 +70,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 16. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 17. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
