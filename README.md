@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=40"><img src="assets/ledger-light.svg?v=40" width="100%" alt="ROFL ledger, height 40"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=41"><img src="assets/ledger-light.svg?v=41" width="100%" alt="ROFL ledger, height 41"></picture>
 
 | | |
 |---|---|
-| **height** | `40` |
-| **tip** | `a76eb3a3d906666f7e984d782bd9f2ffdfd43c055712c13bd2b77c4be2847cb1` |
+| **height** | `41` |
+| **tip** | `1920cd7a576ac0ca27388b8a3443f31f445e4df58de2af0f3fcf480c12292929` |
 | **difficulty** | `3.8`  (bits `0x1e043a8b`) |
-| **chainwork** | `440,947,903` expected hashes |
-| **supply** | `2050.00000000 ROFL` in `40` unspent outputs |
+| **chainwork** | `444,915,382` expected hashes |
+| **supply** | `2100.00000000 ROFL` in `41` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `7` block(s) |
-| **next halving** | in `169` block(s) |
-| **transactions** | `42` |
+| **next retarget** | in `6` block(s) |
+| **next halving** | in `168` block(s) |
+| **transactions** | `43` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `41` | `1920cd7a576ac0ca2738…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:19 UTC |
 | `40` | `a76eb3a3d906666f7e98…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 20:07 UTC |
 | `39` | `6f23603950e8f4f50b9f…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `50.00000000` | 2026-09-06 19:39 UTC |
 | `38` | `f2cff225b1718a154556…` | [@ram0verflow](https://github.com/ram0verflow) | `subdivision without loss of properties` | `1` | `50.00000000` | 2026-09-06 19:35 UTC |
@@ -44,14 +45,13 @@
 | `34` | `4a599a788ea5c51dd2d0…` | [@ram0verflow](https://github.com/ram0verflow) | `scientific knowledge builds on itself` | `1` | `50.00000000` | 2026-09-06 18:00 UTC |
 | `33` | `dce767df57b5e235045c…` | [@ram0verflow](https://github.com/ram0verflow) | `everything has a half-life - until now` | `1` | `50.00000000` | 2026-09-06 17:40 UTC |
 | `32` | `8ac1d58e335da0ba1a14…` | [@ram0verflow](https://github.com/ram0verflow) | `its rules are truly immutable - no authority can change them` | `1` | `50.00000000` | 2026-09-06 17:30 UTC |
-| `31` | `8912373a53509c9421f1…` | [@ram0verflow](https://github.com/ram0verflow) | `its operation is truly transparent - no one can hide its mechanics` | `1` | `50.00000000` | 2026-09-06 17:10 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `90.2%` |
-| [@ksanjeev284](https://github.com/ksanjeev284) | `2` | `4.9%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `88.1%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `3` | `7.1%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `2.4%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `2.4%` |
 
@@ -63,7 +63,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |---|---|--:|
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `100.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
 ### Recent transfers
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 40. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 41. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
