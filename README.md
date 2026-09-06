@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=37"><img src="assets/ledger-light.svg?v=37" width="100%" alt="ROFL ledger, height 37"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=38"><img src="assets/ledger-light.svg?v=38" width="100%" alt="ROFL ledger, height 38"></picture>
 
 | | |
 |---|---|
-| **height** | `37` |
-| **tip** | `adde5d7242af6b628c30484646088d244dc49af05154fa39abd088216f9f1288` |
+| **height** | `38` |
+| **tip** | `f2cff225b1718a15455657af6600a208e06d399ef2ee579aeb9e6c405129047b` |
 | **difficulty** | `3.8`  (bits `0x1e043a8b`) |
-| **chainwork** | `429,045,466` expected hashes |
-| **supply** | `1900.00000000 ROFL` in `37` unspent outputs |
+| **chainwork** | `433,012,945` expected hashes |
+| **supply** | `1950.00000000 ROFL` in `38` unspent outputs |
 | **next reward** | `50.00000000 ROFL` |
-| **next retarget** | in `10` block(s) |
-| **next halving** | in `172` block(s) |
-| **transactions** | `39` |
+| **next retarget** | in `9` block(s) |
+| **next halving** | in `171` block(s) |
+| **transactions** | `40` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `38` | `f2cff225b1718a154556…` | [@ram0verflow](https://github.com/ram0verflow) | `subdivision without loss of properties` | `1` | `50.00000000` | 2026-09-06 19:35 UTC |
 | `37` | `adde5d7242af6b628c30…` | [@ram0verflow](https://github.com/ram0verflow) | `66 countries have already lost their currency privileges` | `1` | `50.00000000` | 2026-09-06 19:00 UTC |
 | `36` | `69168f17a4d27583a6d9…` | [@ram0verflow](https://github.com/ram0verflow) | `this creates a perfect asymptotic curve approaching 21 million` | `1` | `50.00000000` | 2026-09-06 18:40 UTC |
 | `35` | `e136ad289ddc3b6fc5af…` | [@ram0verflow](https://github.com/ram0verflow) | `salable across space (borderless transfer)` | `1` | `50.00000000` | 2026-09-06 18:20 UTC |
@@ -44,13 +45,12 @@
 | `31` | `8912373a53509c9421f1…` | [@ram0verflow](https://github.com/ram0verflow) | `its operation is truly transparent - no one can hide its mechanics` | `1` | `50.00000000` | 2026-09-06 17:10 UTC |
 | `30` | `c5eb1e7d45aec3cd9b81…` | [@ram0verflow](https://github.com/ram0verflow) | `paper money deteriorates and burns` | `1` | `50.00000000` | 2026-09-06 16:50 UTC |
 | `29` | `e07e1716ea0da1295dfc…` | [@ram0verflow](https://github.com/ram0verflow) | `bitcoin isn&#x27;t just better money - it&#x27;s better preservation of human life force` | `1` | `50.00000000` | 2026-09-06 15:50 UTC |
-| `28` | `a293158788e08af14536…` | [@ram0verflow](https://github.com/ram0verflow) | `no value leakage through inflation` | `1` | `50.00000000` | 2026-09-06 15:30 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ram0verflow](https://github.com/ram0verflow) | `36` | `94.7%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `94.9%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `2.6%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `2.6%` |
 
@@ -60,7 +60,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1700.00000000 ROFL` |
+| _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
@@ -70,7 +70,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 37. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 38. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
