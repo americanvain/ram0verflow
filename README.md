@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=398"><img src="assets/ledger-light.svg?v=398" width="100%" alt="ROFL ledger, height 398"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=399"><img src="assets/ledger-light.svg?v=399" width="100%" alt="ROFL ledger, height 399"></picture>
 
 | | |
 |---|---|
-| **height** | `398` |
-| **tip** | `e17d99f50b9180a1dfe647f6d547ddfb5c3c4a107d98dd4249915673d74479bf` |
+| **height** | `399` |
+| **tip** | `10d35716e9e8c76c2503751bfdfb8f0c7b465318ebcaeb01a0dd505b46ba7536` |
 | **difficulty** | `15,055,322,015,263.3`  (bits `0x19012b23`) |
-| **chainwork** | `320,995,203,195,809,399,234` expected hashes |
-| **supply** | `15225.00000000 ROFL` in `398` unspent outputs |
+| **chainwork** | `336,781,852,533,286,111,840` expected hashes |
+| **supply** | `15250.00000000 ROFL` in `399` unspent outputs |
 | **next reward** | `25.00000000 ROFL` |
-| **next retarget** | in `1` block(s) |
-| **next halving** | in `21` block(s) |
-| **transactions** | `400` |
+| **next retarget** | in `16` block(s) |
+| **next halving** | in `20` block(s) |
+| **transactions** | `401` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `399` | `10d35716e9e8c76c2503…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:42 UTC |
 | `398` | `e17d99f50b9180a1dfe6…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:40 UTC |
 | `397` | `ffebbcb031b2456234d8…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:39 UTC |
 | `396` | `ee905a606143c8ef8409…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:37 UTC |
@@ -44,16 +45,15 @@
 | `392` | `64df08b79d969082a814…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:31 UTC |
 | `391` | `d6d749fb5d5d0cdc1705…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:29 UTC |
 | `390` | `d18a25b169bfba38e0dd…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:27 UTC |
-| `389` | `9006762abeb354a9d82f…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `25.00000000` | 2026-09-07 01:25 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `360` | `90.2%` |
-| [@ram0verflow](https://github.com/ram0verflow) | `37` | `9.3%` |
-| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.3%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.3%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `361` | `90.2%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `37` | `9.2%` |
+| [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.2%` |
+| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.2%` |
 
 ### Balances
 
@@ -61,7 +61,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `13275.00000000 ROFL` |
+| _unclaimed_ | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `13300.00000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1750.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
@@ -72,7 +72,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 398. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 399. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
