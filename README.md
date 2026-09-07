@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=526"><img src="assets/ledger-light.svg?v=526" width="100%" alt="ROFL ledger, height 526"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=527"><img src="assets/ledger-light.svg?v=527" width="100%" alt="ROFL ledger, height 527"></picture>
 
 | | |
 |---|---|
-| **height** | `526` |
-| **tip** | `3a9c22d17bbfc899f55e8e490f9badc557e6a254935ad34a9f4c0339a0f536fd` |
+| **height** | `527` |
+| **tip** | `b5dc5d7530d40195dab374f116c5f00c908808975b0b43604ffd7834daaee09d` |
 | **difficulty** | `986,665,583,592,294,528.0`  (bits `0x17012b23`) |
-| **chainwork** | `21,036,741,636,611,101,809,854,160` expected hashes |
-| **supply** | `17087.50000000 ROFL` in `526` unspent outputs |
+| **chainwork** | `22,071,335,487,591,975,647,244,880` expected hashes |
+| **supply** | `17100.00000000 ROFL` in `527` unspent outputs |
 | **next reward** | `12.50000000 ROFL` |
-| **next retarget** | in `1` block(s) |
-| **next halving** | in `103` block(s) |
-| **transactions** | `528` |
+| **next retarget** | in `16` block(s) |
+| **next halving** | in `102` block(s) |
+| **transactions** | `529` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `527` | `b5dc5d7530d40195dab3…` | [@eltociear](https://github.com/eltociear) | `gm - block 3 of 3` | `1` | `12.50000000` | 2026-09-07 09:09 UTC |
 | `526` | `3a9c22d17bbfc899f55e…` | [@eltociear](https://github.com/eltociear) | `gm - block 2 of 3` | `1` | `12.50000000` | 2026-09-07 09:00 UTC |
 | `525` | `a8956cb7168de93a8a15…` | [@eltociear](https://github.com/eltociear) | `gm - block 1 of 3` | `1` | `12.50000000` | 2026-09-07 08:52 UTC |
 | `524` | `99c52757d5d4b673590a…` | [@eltociear](https://github.com/eltociear) | `gm - numpy MITM on 8 cores` | `1` | `12.50000000` | 2026-09-07 08:16 UTC |
@@ -44,15 +45,14 @@
 | `520` | `43286949f491c56b078b…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `12.50000000` | 2026-09-07 05:39 UTC |
 | `519` | `e170bc61c773916aec83…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `12.50000000` | 2026-09-07 05:37 UTC |
 | `518` | `59caee753c0fa9139590…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `12.50000000` | 2026-09-07 05:35 UTC |
-| `517` | `c93d1c0cd8ee5002b3ae…` | [@ksanjeev284](https://github.com/ksanjeev284) | `gm` | `1` | `12.50000000` | 2026-09-07 05:33 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `91.8%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `91.7%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `38` | `7.2%` |
-| [@eltociear](https://github.com/eltociear) | `3` | `0.6%` |
+| [@eltociear](https://github.com/eltociear) | `4` | `0.8%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.2%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.2%` |
 
@@ -66,7 +66,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1762.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
-| _unclaimed_ | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `37.50000000 ROFL` |
+| _unclaimed_ | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `50.00000000 ROFL` |
 
 ### Recent transfers
 
@@ -74,7 +74,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 526. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 527. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
