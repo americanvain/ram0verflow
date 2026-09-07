@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=537"><img src="assets/ledger-light.svg?v=537" width="100%" alt="ROFL ledger, height 537"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=538"><img src="assets/ledger-light.svg?v=538" width="100%" alt="ROFL ledger, height 538"></picture>
 
 | | |
 |---|---|
-| **height** | `537` |
-| **tip** | `df489ecc9c9168ac6773075bbbb579feea5e5d22fc352d8a337a016cc308fe57` |
+| **height** | `538` |
+| **tip** | `550511712e47663b3fa7456ceb98a72a5155007e4aca355b982d6c3f9a35b457` |
 | **difficulty** | `696,931,824,248,621,696.0`  (bits `0x1701a77f`) |
-| **chainwork** | `29,379,195,333,025,203,299,649,430` expected hashes |
-| **supply** | `17225.00000000 ROFL` in `537` unspent outputs |
+| **chainwork** | `30,109,981,317,568,526,064,889,885` expected hashes |
+| **supply** | `17237.50000000 ROFL` in `538` unspent outputs |
 | **next reward** | `12.50000000 ROFL` |
-| **next retarget** | in `6` block(s) |
-| **next halving** | in `92` block(s) |
-| **transactions** | `539` |
+| **next retarget** | in `5` block(s) |
+| **next halving** | in `91` block(s) |
+| **transactions** | `540` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `538` | `550511712e47663b3fa7…` | [@eltociear](https://github.com/eltociear) | `gm - block 4 of 7` | `1` | `12.50000000` | 2026-09-07 11:43 UTC |
 | `537` | `df489ecc9c9168ac6773…` | [@eltociear](https://github.com/eltociear) | `gm - block 3 of 7` | `1` | `12.50000000` | 2026-09-07 11:33 UTC |
 | `536` | `4598ba8aa58f3a7ca24f…` | [@eltociear](https://github.com/eltociear) | `gm - block 2 of 7` | `1` | `12.50000000` | 2026-09-07 11:23 UTC |
 | `535` | `79c01c3c20e137f4bd86…` | [@eltociear](https://github.com/eltociear) | `gm - block 1 of 7` | `1` | `12.50000000` | 2026-09-07 11:13 UTC |
@@ -44,15 +45,14 @@
 | `531` | `3944cf13f43d8606d361…` | [@eltociear](https://github.com/eltociear) | `gm - block 4 of 7` | `1` | `12.50000000` | 2026-09-07 10:03 UTC |
 | `530` | `88d5aa3f2de7756cd7fe…` | [@eltociear](https://github.com/eltociear) | `gm - block 3 of 7` | `1` | `12.50000000` | 2026-09-07 09:53 UTC |
 | `529` | `612e46e1c6a5b4251ba3…` | [@eltociear](https://github.com/eltociear) | `gm - block 2 of 7` | `1` | `12.50000000` | 2026-09-07 09:43 UTC |
-| `528` | `a6bc94ad6287edcf037e…` | [@eltociear](https://github.com/eltociear) | `gm - block 1 of 7` | `1` | `12.50000000` | 2026-09-07 09:33 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `90.0%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `89.8%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `38` | `7.1%` |
-| [@eltociear](https://github.com/eltociear) | `14` | `2.6%` |
+| [@eltociear](https://github.com/eltociear) | `15` | `2.8%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.2%` |
 | [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.2%` |
 
@@ -64,7 +64,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |---|---|--:|
 | [@ksanjeev284](https://github.com/ksanjeev284) | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `15087.50000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `1762.50000000 ROFL` |
-| _unclaimed_ | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `175.00000000 ROFL` |
+| _unclaimed_ | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `187.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 
@@ -74,7 +74,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 537. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 538. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
