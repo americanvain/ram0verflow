@@ -3,6 +3,10 @@ name: ROFL node (pull requests)
 # Accepts transactions submitted as pull requests, so contributors get the
 # PR on their profile.
 #
+# A pull request that does not add a file under chain/pending/ is not a
+# transaction submission. This workflow ignores those completely: no comment,
+# no close, no interference with ordinary code review.
+#
 # SECURITY NOTE, and the reason this file is shaped the way it is:
 # `pull_request_target` runs with a write token from the BASE repository. If
 # it checked out the fork's branch and ran anything from it -- a build step,
@@ -43,55 +47,62 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Read the submitted file
-        id: read
+      - name: Is this a transaction submission?
+        id: triage
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
-          SHA: ${{ github.event.pull_request.head.sha }}
           REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          files=$(gh api "repos/$REPO/pulls/$PR/files" --paginate \
-                    --jq '.[] | "\(.status) \(.filename)"')
-          count=$(printf '%s\n' "$files" | grep -c . || true)
-          echo "changed files:"; printf '%s\n' "$files"
+          gh api "repos/$REPO/pulls/$PR/files" --paginate \
+            --jq '.[] | "\(.status) \(.filename)"' > /tmp/files.txt
+          echo "changed files:"; cat /tmp/files.txt
+          total=$(grep -c . /tmp/files.txt || true)
+          pending=$(grep -c '^added chain/pending/' /tmp/files.txt || true)
 
-          if [ "$count" -ne 1 ]; then
-            echo "reject=A transaction pull request must change exactly one file. This one changes $count." >> "$GITHUB_OUTPUT"
+          if [ "$pending" -eq 0 ]; then
+            echo "No file added under chain/pending/ — this is an ordinary pull"
+            echo "request, not a transaction. Leaving it alone."
+            echo "handle=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          echo "handle=true" >> "$GITHUB_OUTPUT"
 
-          status=$(printf '%s' "$files" | cut -d' ' -f1)
-          path=$(printf '%s' "$files" | cut -d' ' -f2-)
-
-          case "$path" in
-            chain/pending/*)  ;;
-            *) echo "reject=Only new files under \`chain/pending/\` are accepted. This changes \`$path\`." >> "$GITHUB_OUTPUT"; exit 0 ;;
-          esac
-          if [ "$status" != "added" ]; then
-            echo "reject=\`$path\` must be a new file, not $status." >> "$GITHUB_OUTPUT"
+          if [ "$total" -ne 1 ]; then
+            echo "reject=A transaction pull request must add exactly one file under \`chain/pending/\` and change nothing else. This one changes $total files." >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          path=$(cut -d' ' -f2- /tmp/files.txt)
+          echo "path=$path" >> "$GITHUB_OUTPUT"
+          echo "ok=true" >> "$GITHUB_OUTPUT"
 
+      - name: Read the submitted file
+        id: read
+        if: steps.triage.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+          PATH_IN_PR: ${{ steps.triage.outputs.path }}
+        run: |
+          set -euo pipefail
           # Fetched as inert text through the API. Nothing from the fork runs.
-          gh api "repos/$REPO/contents/$path?ref=$SHA" --jq '.content' \
+          gh api "repos/$REPO/contents/$PATH_IN_PR?ref=$SHA" --jq '.content' \
             | base64 -d > /tmp/submission.txt
           if [ "$(stat -c%s /tmp/submission.txt)" -gt 65536 ]; then
-            echo "reject=Submission file is too large." >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "toobig=true" >> "$GITHUB_OUTPUT"
           fi
-          echo "ok=true" >> "$GITHUB_OUTPUT"
 
       - name: Validate and apply
         id: rofl
-        if: steps.read.outputs.ok == 'true'
+        if: steps.triage.outputs.ok == 'true' && steps.read.outputs.toobig != 'true'
         env:
           COMMENT_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           COMMENT_BODY="$(cat /tmp/submission.txt)" python3 submit.py
 
-      - name: Verify the whole chain still replays
+      - name: Verify the chain still replays
         if: steps.rofl.outputs.changed == 'true'
         run: python3 verify.py
 
@@ -110,21 +121,27 @@ jobs:
           done
           exit 1
 
-      - name: Reply and close
-        if: always()
+      - name: Reply
+        if: always() && steps.triage.outputs.handle == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
-          REJECT: ${{ steps.read.outputs.reject }}
+          REJECT: ${{ steps.triage.outputs.reject }}
+          TOOBIG: ${{ steps.read.outputs.toobig }}
           REPLY: ${{ steps.rofl.outputs.reply }}
+          APPLIED: ${{ steps.rofl.outputs.changed }}
         run: |
           if [ -n "$REJECT" ]; then
-            printf '**Rejected.** %s\n' "$REJECT" > /tmp/reply.md
+            printf '**Rejected.** %s\n\nLeaving this open so you can adjust it.\n' "$REJECT" > /tmp/reply.md
+          elif [ "$TOOBIG" = "true" ]; then
+            printf '**Rejected.** That submission file is too large.\n' > /tmp/reply.md
           elif [ -n "$REPLY" ]; then
-            printf '%s\n' "$REPLY" >> /tmp/reply.md
-            printf '\n\nThis pull request is closed rather than merged: the node applied your transaction to `main` directly, which is why concurrent submissions never conflict. Your contribution is recorded in the commit.\n' >> /tmp/reply.md
+            printf '%s\n' "$REPLY" > /tmp/reply.md
           else
             printf 'The node could not process this pull request.\n' > /tmp/reply.md
           fi
+          if [ "$APPLIED" = "true" ]; then
+            printf '\nClosing rather than merging: the node applied your transaction to `main` directly, which is why concurrent submissions never conflict. Your contribution is recorded in the commit.\n' >> /tmp/reply.md
+          fi
           gh pr comment "$PR" --body-file /tmp/reply.md
-          gh pr close "$PR" || true
+          if [ "$APPLIED" = "true" ]; then gh pr close "$PR" || true; fi
