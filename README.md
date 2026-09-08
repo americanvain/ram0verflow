@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=592"><img src="assets/ledger-light.svg?v=592" width="100%" alt="ROFL ledger, height 592"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=593"><img src="assets/ledger-light.svg?v=593" width="100%" alt="ROFL ledger, height 593"></picture>
 
 | | |
 |---|---|
-| **height** | `592` |
-| **tip** | `34d1cb4836bd0017cac36337c5b2edcf503f4653b889a1cf214f3a1daaab99f5` |
+| **height** | `593` |
+| **tip** | `5ac6b9ea17ea767bb386c65171e76936c09179caf5d15abad93add69d4c18b78` |
 | **difficulty** | `30,212,184,509,825,564.0`  (bits `0x1726292b`) |
-| **chainwork** | `46,410,434,023,400,232,426,729,292` expected hashes |
-| **supply** | `17912.50000000 ROFL` in `592` unspent outputs |
+| **chainwork** | `46,442,113,794,984,807,278,010,664` expected hashes |
+| **supply** | `17925.00000000 ROFL` in `593` unspent outputs |
 | **next reward** | `12.50000000 ROFL` |
-| **next retarget** | in `15` block(s) |
-| **next halving** | in `37` block(s) |
-| **transactions** | `594` |
+| **next retarget** | in `14` block(s) |
+| **next halving** | in `36` block(s) |
+| **transactions** | `595` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `593` | `5ac6b9ea17ea767bb386…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi #3` | `1` | `12.50000000` | 2026-09-08 16:07 UTC |
 | `592` | `34d1cb4836bd0017cac3…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi #2` | `1` | `12.50000000` | 2026-09-08 16:03 UTC |
 | `591` | `5dc87537cd19f56f3194…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi #1` | `1` | `12.50000000` | 2026-09-08 15:59 UTC |
 | `590` | `fb0c812a2945a1754e03…` | [@ram0verflow](https://github.com/ram0verflow) | `paper money deteriorates and burns` | `1` | `12.50000000` | 2026-09-08 15:16 UTC |
@@ -44,16 +45,15 @@
 | `586` | `0a4ca356873cd2a328fd…` | [@ram0verflow](https://github.com/ram0verflow) | `scarcity is not a flaw in existence, but its essential design principle` | `1` | `12.50000000` | 2026-09-08 12:10 UTC |
 | `585` | `e63bbcc6052d755749a6…` | [@ram0verflow](https://github.com/ram0verflow) | `66 countries have already lost their currency privileges` | `1` | `12.50000000` | 2026-09-08 11:40 UTC |
 | `584` | `0db8ebb349931d87cd7e…` | [@ram0verflow](https://github.com/ram0verflow) | `consistent value ratio between units` | `1` | `12.50000000` | 2026-09-08 11:28 UTC |
-| `583` | `e1e82d6aa407b545b4ff…` | [@ram0verflow](https://github.com/ram0verflow) | `normal code can be changed; bitcoin&#x27;s core properties are immutable` | `1` | `12.50000000` | 2026-09-08 10:00 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `81.6%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `81.5%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `52` | `8.8%` |
-| [@eltociear](https://github.com/eltociear) | `49` | `8.3%` |
-| [@lovivi](https://github.com/lovivi) | `3` | `0.5%` |
+| [@eltociear](https://github.com/eltociear) | `49` | `8.2%` |
+| [@lovivi](https://github.com/lovivi) | `4` | `0.7%` |
 | [@nodgd](https://github.com/nodgd) | `2` | `0.3%` |
 | [@SionInory](https://github.com/SionInory) | `1` | `0.2%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.2%` |
@@ -70,7 +70,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | [@eltociear](https://github.com/eltociear) | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `612.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3jwm3gz2s9xy7wa5hg0cgcn9k2s56uma79ynfl` | `150.00000000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
-| _unclaimed_ | `rofl1qgz45v82mfe8ksyyfezss7m2p8udlsdwp0984vv` | `37.50000000 ROFL` |
+| _unclaimed_ | `rofl1qgz45v82mfe8ksyyfezss7m2p8udlsdwp0984vv` | `50.00000000 ROFL` |
 | _unclaimed_ | `rofl1qyhsqc8t5ldhasar60yfq5u73ga69n94atrg6pt` | `25.00000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
 
@@ -80,7 +80,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 592. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 593. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
