@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=681"><img src="assets/ledger-light.svg?v=681" width="100%" alt="ROFL ledger, height 681"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=682"><img src="assets/ledger-light.svg?v=682" width="100%" alt="ROFL ledger, height 682"></picture>
 
 | | |
 |---|---|
-| **height** | `681` |
-| **tip** | `a5551b35ee073610d68e4f08f4620a6e2d4065df0cdadc49e22662e43870f9d1` |
+| **height** | `682` |
+| **tip** | `8d00e3b56a5d189455295fa726430e84b81864c918e59f43110a75a53399ceec` |
 | **difficulty** | `683,379,584,189,520,384.0`  (bits `0x1701afe5`) |
-| **chainwork** | `58,003,575,957,303,965,150,189,058` expected hashes |
-| **supply** | `18700.00000000 ROFL` in `681` unspent outputs |
+| **chainwork** | `58,720,151,388,175,075,696,867,879` expected hashes |
+| **supply** | `18706.25000000 ROFL` in `682` unspent outputs |
 | **next reward** | `6.25000000 ROFL` |
-| **next retarget** | in `6` block(s) |
-| **next halving** | in `158` block(s) |
-| **transactions** | `683` |
+| **next retarget** | in `5` block(s) |
+| **next halving** | in `157` block(s) |
+| **transactions** | `684` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `682` | `8d00e3b56a5d18945529…` | [@lhc44](https://github.com/lhc44) | `中国人能飞` | `1` | `6.25000000` | 2026-09-09 05:09 UTC |
 | `681` | `a5551b35ee073610d68e…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 05:05 UTC |
 | `680` | `0a0cd253a2b1213499d2…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 05:04 UTC |
 | `679` | `b894bb6a4ce84831fb96…` | [@nodgd](https://github.com/nodgd) | `Hahaha` | `1` | `6.25000000` | 2026-09-09 05:00 UTC |
@@ -44,13 +45,12 @@
 | `675` | `2589dc47f881de994834…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi rust` | `1` | `6.25000000` | 2026-09-09 04:49 UTC |
 | `674` | `bac392f0c96e66711278…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 04:47 UTC |
 | `673` | `233eea647fed85382944…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 04:45 UTC |
-| `672` | `e9c183f7572f4f8b7ca6…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 04:43 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `71.0%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `484` | `70.9%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `62` | `9.1%` |
 | [@eltociear](https://github.com/eltociear) | `49` | `7.2%` |
 | [@nodgd](https://github.com/nodgd) | `24` | `3.5%` |
@@ -61,7 +61,7 @@
 | [@sinofool](https://github.com/sinofool) | `3` | `0.4%` |
 | [@SionInory](https://github.com/SionInory) | `1` | `0.1%` |
 | [@axewhyzed](https://github.com/axewhyzed) | `1` | `0.1%` |
-| [@notram0verflow](https://github.com/notram0verflow) | `1` | `0.1%` |
+| [@lhc44](https://github.com/lhc44) | `1` | `0.1%` |
 
 ### Balances
 
@@ -81,6 +81,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 | _unclaimed_ | `rofl1qslgfl5lmx0czpcyq9g6qh29cdrq238mapaxcr5` | `37.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
+| _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `6.25000000 ROFL` |
 
 ### Recent transfers
 
@@ -88,7 +89,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 681. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 682. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
