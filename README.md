@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=734"><img src="assets/ledger-light.svg?v=734" width="100%" alt="ROFL ledger, height 734"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=735"><img src="assets/ledger-light.svg?v=735" width="100%" alt="ROFL ledger, height 735"></picture>
 
 | | |
 |---|---|
-| **height** | `734` |
-| **tip** | `a6b3afb4b0ec854fd08a7022aa3395a6dfc8594195f780989181c22a52c73c00` |
+| **height** | `735` |
+| **tip** | `e7b7f168291845e782a9f3b5536b2db5fb2a647f96163e3a1a4cac95c6643846` |
 | **difficulty** | `34,096,148,284,042,833,920.0`  (bits `0x1608a806`) |
-| **chainwork** | `827,702,306,373,426,408,641,954,747` expected hashes |
-| **supply** | `19031.25000000 ROFL` in `734` unspent outputs |
+| **chainwork** | `863,454,709,156,514,905,463,660,384` expected hashes |
+| **supply** | `19037.50000000 ROFL` in `735` unspent outputs |
 | **next reward** | `6.25000000 ROFL` |
-| **next retarget** | in `1` block(s) |
-| **next halving** | in `105` block(s) |
-| **transactions** | `736` |
+| **next retarget** | in `16` block(s) |
+| **next halving** | in `104` block(s) |
+| **transactions** | `737` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `735` | `e7b7f168291845e782a9…` | [@lusgt](https://github.com/lusgt) | `gm` | `1` | `6.25000000` | 2026-09-09 07:47 UTC |
 | `734` | `a6b3afb4b0ec854fd08a…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi gpu` | `1` | `6.25000000` | 2026-09-09 07:44 UTC |
 | `733` | `008e385175c8d4e2ddd9…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `6.25000000` | 2026-09-09 07:39 UTC |
 | `732` | `a2d86559e086d41be67e…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 07:37 UTC |
@@ -44,13 +45,12 @@
 | `728` | `f34f7344e211fd2acc07…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi gpu` | `1` | `6.25000000` | 2026-09-09 07:27 UTC |
 | `727` | `ec9d0edb679198c3be6a…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi gpu` | `1` | `6.25000000` | 2026-09-09 07:24 UTC |
 | `726` | `bdfa281bd305e4dc712c…` | [@KirkLee12345](https://github.com/KirkLee12345) | `即使是没有价值的币也要挖喵~` | `1` | `6.25000000` | 2026-09-09 07:19 UTC |
-| `725` | `89e79bb6bb96ee690607…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 07:17 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `66.4%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `66.3%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `62` | `8.4%` |
 | [@eltociear](https://github.com/eltociear) | `49` | `6.7%` |
 | [@uselessfree](https://github.com/uselessfree) | `44` | `6.0%` |
@@ -61,7 +61,7 @@
 | [@KirkLee12345](https://github.com/KirkLee12345) | `6` | `0.8%` |
 | [@sinofool](https://github.com/sinofool) | `3` | `0.4%` |
 | [@lhc44](https://github.com/lhc44) | `2` | `0.3%` |
-| [@SionInory](https://github.com/SionInory) | `1` | `0.1%` |
+| [@lusgt](https://github.com/lusgt) | `2` | `0.3%` |
 
 ### Balances
 
@@ -83,7 +83,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | [@KirkLee12345](https://github.com/KirkLee12345) | `rofl1qkf8jkr6xz5jaa7a33usnvl3x2njcvzlrgjpe62` | `37.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `12.50000000 ROFL` |
-| _unclaimed_ | `rofl1qe02gy6ye34lygmska4j93ul03y2hher4rwc2vp` | `6.25000000 ROFL` |
+| _unclaimed_ | `rofl1qe02gy6ye34lygmska4j93ul03y2hher4rwc2vp` | `12.50000000 ROFL` |
 
 ### Recent transfers
 
@@ -91,7 +91,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 734. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 735. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
