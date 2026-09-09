@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=980"><img src="assets/ledger-light.svg?v=980" width="100%" alt="ROFL ledger, height 980"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=981"><img src="assets/ledger-light.svg?v=981" width="100%" alt="ROFL ledger, height 981"></picture>
 
 | | |
 |---|---|
-| **height** | `980` |
-| **tip** | `2f8f45a89f58d3232d017b54644392e9dba2a2d1103fe5df36aa1b4c5bf88d41` |
+| **height** | `981` |
+| **tip** | `3f187b477a612f91a4c8e2c4812c79e628064e6f78f0f320bb0bb6fa5b20031e` |
 | **difficulty** | `14,748,960,446,377,182,346,115,809,280.0`  (bits `0x1255f2cf`) |
-| **chainwork** | `183,221,442,972,429,357,234,250,004,599,524,141` expected hashes |
-| **supply** | `20128.12500000 ROFL` in `980` unspent outputs |
+| **chainwork** | `198,686,848,921,449,758,686,306,089,680,731,398` expected hashes |
+| **supply** | `20131.25000000 ROFL` in `981` unspent outputs |
 | **next reward** | `3.12500000 ROFL` |
-| **next retarget** | in `11` block(s) |
-| **next halving** | in `69` block(s) |
-| **transactions** | `982` |
+| **next retarget** | in `10` block(s) |
+| **next halving** | in `68` block(s) |
+| **transactions** | `983` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `981` | `3f187b477a612f91a4c8…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 21:04 UTC |
 | `980` | `2f8f45a89f58d3232d01…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 21:01 UTC |
 | `979` | `698625740f32a477a6ae…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:53 UTC |
 | `978` | `f22a86222038ef0b5631…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:51 UTC |
@@ -44,7 +45,6 @@
 | `974` | `caf9b7614bf986427280…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:38 UTC |
 | `973` | `9c6db74e5a1c144cd30c…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:36 UTC |
 | `972` | `9083a72d34340f412d96…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:33 UTC |
-| `971` | `755a57eea7fdea85f533…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:27 UTC |
 
 ### Miners
 
@@ -61,7 +61,7 @@
 | [@lusgt](https://github.com/lusgt) | `17` | `1.7%` |
 | [@lovivi](https://github.com/lovivi) | `11` | `1.1%` |
 | [@KirkLee12345](https://github.com/KirkLee12345) | `6` | `0.6%` |
-| [@sd5884703](https://github.com/sd5884703) | `5` | `0.5%` |
+| [@sd5884703](https://github.com/sd5884703) | `6` | `0.6%` |
 
 ### Balances
 
@@ -83,7 +83,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 | _unclaimed_ | `rofl1qslgfl5lmx0czpcyq9g6qh29cdrq238mapaxcr5` | `37.50000000 ROFL` |
 | [@KirkLee12345](https://github.com/KirkLee12345) | `rofl1qkf8jkr6xz5jaa7a33usnvl3x2njcvzlrgjpe62` | `37.50000000 ROFL` |
-| _unclaimed_ | `rofl1qx5yhylqaa428e8yc3hqseh8z0pe79qe4cpsyxe` | `15.62500000 ROFL` |
+| _unclaimed_ | `rofl1qx5yhylqaa428e8yc3hqseh8z0pe79qe4cpsyxe` | `18.75000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qzmkk6cfxs3jd322twyv7luy9eqdpcn2znmusvq` | `3.12500000 ROFL` |
@@ -94,7 +94,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 980. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 981. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
