@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=706"><img src="assets/ledger-light.svg?v=706" width="100%" alt="ROFL ledger, height 706"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=707"><img src="assets/ledger-light.svg?v=707" width="100%" alt="ROFL ledger, height 707"></picture>
 
 | | |
 |---|---|
-| **height** | `706` |
-| **tip** | `8a5dc49bb4a938bde7cb66dd7536aba85d099853e9354ad1b9abdc7270a2f66f` |
+| **height** | `707` |
+| **tip** | `99e6d124aa674d973959a265fc66e0f9af783ee99e1a548d15edf5f4b6ac3665` |
 | **difficulty** | `10,924,970,440,128,722,944.0`  (bits `0x161b0412`) |
-| **chainwork** | `142,492,661,172,129,543,190,399,849` expected hashes |
-| **supply** | `18856.25000000 ROFL` in `706` unspent outputs |
+| **chainwork** | `153,948,322,976,357,959,584,705,260` expected hashes |
+| **supply** | `18862.50000000 ROFL` in `707` unspent outputs |
 | **next reward** | `6.25000000 ROFL` |
-| **next retarget** | in `13` block(s) |
-| **next halving** | in `133` block(s) |
-| **transactions** | `708` |
+| **next retarget** | in `12` block(s) |
+| **next halving** | in `132` block(s) |
+| **transactions** | `709` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `707` | `99e6d124aa674d973959…` | [@ksanjeev284](https://github.com/ksanjeev284) | &nbsp; | `1` | `6.25000000` | 2026-09-09 06:16 UTC |
 | `706` | `8a5dc49bb4a938bde7cb…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 06:14 UTC |
 | `705` | `96c7b3a497a5fd655cc2…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 06:12 UTC |
 | `704` | `7145c4d6a138803a7cca…` | [@KirkLee12345](https://github.com/KirkLee12345) | `( ) ( ) , ( ) ( ) ( ) ( )` | `1` | `6.25000000` | 2026-09-09 06:09 UTC |
@@ -44,13 +45,12 @@
 | `700` | `f17d882944d2d5f3b741…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 05:59 UTC |
 | `699` | `b79e580ef379f68a3f00…` | [@lovivi](https://github.com/lovivi) | `gm from lovivi gpu` | `1` | `6.25000000` | 2026-09-09 05:56 UTC |
 | `698` | `bea8df6bbddb965e8a08…` | [@uselessfree](https://github.com/uselessfree) | `gm` | `1` | `6.25000000` | 2026-09-09 05:53 UTC |
-| `697` | `18094e230708bca8e4c5…` | [@ksanjeev284](https://github.com/ksanjeev284) | &nbsp; | `1` | `6.25000000` | 2026-09-09 05:51 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `487` | `68.9%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `68.9%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `62` | `8.8%` |
 | [@eltociear](https://github.com/eltociear) | `49` | `6.9%` |
 | [@uselessfree](https://github.com/uselessfree) | `34` | `4.8%` |
@@ -69,7 +69,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 
 | holder | address | balance |
 |---|---|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `15106.25000000 ROFL` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `rofl1qn2wv00sq9a875c7pmqf4hfu2ca2y7fa0le96wk` | `15112.50000000 ROFL` |
 | _unclaimed_ | `rofl1qhkhmy848s09y2jyly8jexk4gd3gnrrclxj2exx` | `2062.50000000 ROFL` |
 | [@eltociear](https://github.com/eltociear) | `rofl1qdsfz9v9r2hc798k26egt33zxj8ysg4cgwgcw2z` | `612.50000000 ROFL` |
 | [@uselessfree](https://github.com/uselessfree) | `rofl1qm3zqhkwlh85xsaktutuculxhcqnd8vwnj6rt3z` | `268.75000000 ROFL` |
@@ -90,7 +90,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 706. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 707. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
