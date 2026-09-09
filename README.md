@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=973"><img src="assets/ledger-light.svg?v=973" width="100%" alt="ROFL ledger, height 973"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=974"><img src="assets/ledger-light.svg?v=974" width="100%" alt="ROFL ledger, height 974"></picture>
 
 | | |
 |---|---|
-| **height** | `973` |
-| **tip** | `9c6db74e5a1c144cd30cc7556155f7aeea6b07c703830d505522cf7d6feea4e4` |
+| **height** | `974` |
+| **tip** | `caf9b7614bf986427280f9c9f0af7bed7e7f874bcbcb864c13befed822df8b21` |
 | **difficulty** | `4,602,904,183,629,444,675,627,122,688.0`  (bits `0x13011367`) |
-| **chainwork** | `96,241,423,512,820,493,146,221,125,725,358,324` expected hashes |
-| **supply** | `20106.25000000 ROFL` in `973` unspent outputs |
+| **chainwork** | `101,067,918,370,073,921,560,095,352,459,423,090` expected hashes |
+| **supply** | `20109.37500000 ROFL` in `974` unspent outputs |
 | **next reward** | `3.12500000 ROFL` |
-| **next retarget** | in `2` block(s) |
-| **next halving** | in `76` block(s) |
-| **transactions** | `975` |
+| **next retarget** | in `1` block(s) |
+| **next halving** | in `75` block(s) |
+| **transactions** | `976` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `974` | `caf9b7614bf986427280…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:38 UTC |
 | `973` | `9c6db74e5a1c144cd30c…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:36 UTC |
 | `972` | `9083a72d34340f412d96…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `3.12500000` | 2026-09-09 20:33 UTC |
 | `971` | `755a57eea7fdea85f533…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:27 UTC |
@@ -44,7 +45,6 @@
 | `967` | `ff600120217541b6d3d8…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:14 UTC |
 | `966` | `99aa7a9a44a01ddc6597…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:10 UTC |
 | `965` | `b9c8e6178ad9a69fa519…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:06 UTC |
-| `964` | `92262e2c48eedb3820c7…` | [@bulanzade](https://github.com/bulanzade) | `gm` | `1` | `3.12500000` | 2026-09-09 20:03 UTC |
 
 ### Miners
 
@@ -61,7 +61,7 @@
 | [@lusgt](https://github.com/lusgt) | `17` | `1.7%` |
 | [@lovivi](https://github.com/lovivi) | `11` | `1.1%` |
 | [@KirkLee12345](https://github.com/KirkLee12345) | `6` | `0.6%` |
-| [@sinofool](https://github.com/sinofool) | `3` | `0.3%` |
+| [@sd5884703](https://github.com/sd5884703) | `3` | `0.3%` |
 
 ### Balances
 
@@ -85,7 +85,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | [@KirkLee12345](https://github.com/KirkLee12345) | `rofl1qkf8jkr6xz5jaa7a33usnvl3x2njcvzlrgjpe62` | `37.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `12.50000000 ROFL` |
-| _unclaimed_ | `rofl1qx5yhylqaa428e8yc3hqseh8z0pe79qe4cpsyxe` | `6.25000000 ROFL` |
+| _unclaimed_ | `rofl1qx5yhylqaa428e8yc3hqseh8z0pe79qe4cpsyxe` | `9.37500000 ROFL` |
 | _unclaimed_ | `rofl1qzmkk6cfxs3jd322twyv7luy9eqdpcn2znmusvq` | `3.12500000 ROFL` |
 
 ### Recent transfers
@@ -94,7 +94,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 973. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 974. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
