@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1213"><img src="assets/ledger-light.svg?v=1213" width="100%" alt="ROFL ledger, height 1213"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1214"><img src="assets/ledger-light.svg?v=1214" width="100%" alt="ROFL ledger, height 1214"></picture>
 
 | | |
 |---|---|
-| **height** | `1213` |
-| **tip** | `3613a80131fb493440c430c4b626251d251e818293df74a20364d21bd7f0e271` |
+| **height** | `1214` |
+| **tip** | `3fbc3a9cd21e448fa976a465598798bfba059a945c9d810be80c5f0e0f2daeca` |
 | **difficulty** | `114,703,532,438,693,275,745,159,380,545,306,624.0`  (bits `0x1000b96a`) |
-| **chainwork** | `2,609,135,571,976,062,736,654,323,146,779,204,807,219,450` expected hashes |
-| **supply** | `20600.00000000 ROFL` in `1213` unspent outputs |
+| **chainwork** | `2,729,410,943,206,497,985,553,180,094,442,753,042,579,517` expected hashes |
+| **supply** | `20601.56250000 ROFL` in `1214` unspent outputs |
 | **next reward** | `1.56250000 ROFL` |
-| **next retarget** | in `2` block(s) |
-| **next halving** | in `46` block(s) |
-| **transactions** | `1215` |
+| **next retarget** | in `1` block(s) |
+| **next halving** | in `45` block(s) |
+| **transactions** | `1216` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `1214` | `3fbc3a9cd21e448fa976…` | [@americanvain](https://github.com/americanvain) | `testing` | `1` | `1.56250000` | 2026-09-10 10:24 UTC |
 | `1213` | `3613a80131fb493440c4…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 10:20 UTC |
 | `1212` | `c1ea1f68cbd0cdcb741d…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 10:17 UTC |
 | `1211` | `f767220d31236f0b90eb…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 10:14 UTC |
@@ -44,7 +45,6 @@
 | `1207` | `5cd014eb9cb9d912f819…` | [@uselessfree](https://github.com/uselessfree) | `菜就多练` | `1` | `1.56250000` | 2026-09-10 09:58 UTC |
 | `1206` | `d5df5f713d5b7dc90a91…` | [@uselessfree](https://github.com/uselessfree) | `菜就多练` | `1` | `1.56250000` | 2026-09-10 09:55 UTC |
 | `1205` | `aa607b8fb1542877ae95…` | [@uselessfree](https://github.com/uselessfree) | `菜就多练` | `1` | `1.56250000` | 2026-09-10 09:54 UTC |
-| `1204` | `899268e5d7c8210da7a1…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 09:49 UTC |
 
 ### Miners
 
@@ -53,7 +53,7 @@
 | [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `40.2%` |
 | [@ywltby](https://github.com/ywltby) | `164` | `13.5%` |
 | [@sd5884703](https://github.com/sd5884703) | `122` | `10.0%` |
-| [@uselessfree](https://github.com/uselessfree) | `99` | `8.2%` |
+| [@uselessfree](https://github.com/uselessfree) | `99` | `8.1%` |
 | [@bulanzade](https://github.com/bulanzade) | `96` | `7.9%` |
 | [@ram0verflow](https://github.com/ram0verflow) | `62` | `5.1%` |
 | [@eltociear](https://github.com/eltociear) | `50` | `4.1%` |
@@ -90,7 +90,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1qrpnrtc6jnaku3lpaghdn6z6gxf4h88jrdpcmxw` | `6.25000000 ROFL` |
 | _unclaimed_ | `rofl1qp86qhl5pats9c28n48zd9pjda8t4jjeqwk7p44` | `4.68750000 ROFL` |
 | _unclaimed_ | `rofl1qzmkk6cfxs3jd322twyv7luy9eqdpcn2znmusvq` | `3.12500000 ROFL` |
-| _unclaimed_ | `rofl1qxu56n53xphqyvpxdqgdny8rvg5hvuw5n58s6ke` | `1.56250000 ROFL` |
+| _unclaimed_ | `rofl1qxu56n53xphqyvpxdqgdny8rvg5hvuw5n58s6ke` | `3.12500000 ROFL` |
 
 ### Recent transfers
 
@@ -98,7 +98,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 1213. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 1214. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
