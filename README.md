@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1315"><img src="assets/ledger-light.svg?v=1315" width="100%" alt="ROFL ledger, height 1315"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1316"><img src="assets/ledger-light.svg?v=1316" width="100%" alt="ROFL ledger, height 1316"></picture>
 
 | | |
 |---|---|
-| **height** | `1315` |
-| **tip** | `97496a2e211ef47231bb6aab5a1b5fbc0670e3364d65ae6649bc718653e9afc7` |
+| **height** | `1316` |
+| **tip** | `f8800f5ef884643b14a2e27eb27ca07389709effd4cceb27b69ca354dbf2af97` |
 | **difficulty** | `304,713,267,544,757,510,766,286,278,720,648,904,704.0`  (bits `0x0e11de20`) |
-| **chainwork** | `3,492,661,648,218,159,329,166,619,363,761,796,274,342,164,492` expected hashes |
-| **supply** | `20715.62500000 ROFL` in `1315` unspent outputs |
+| **chainwork** | `3,812,176,667,447,170,980,182,646,436,199,973,846,404,453,067` expected hashes |
+| **supply** | `20716.40625000 ROFL` in `1316` unspent outputs |
 | **next reward** | `0.78125000 ROFL` |
-| **next retarget** | in `12` block(s) |
-| **next halving** | in `154` block(s) |
-| **transactions** | `1317` |
+| **next retarget** | in `11` block(s) |
+| **next halving** | in `153` block(s) |
+| **transactions** | `1318` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `1316` | `f8800f5ef884643b14a2…` | [@americanvain](https://github.com/americanvain) | `testing` | `1` | `0.78125000` | 2026-09-10 16:21 UTC |
 | `1315` | `97496a2e211ef47231bb…` | [@ywltby](https://github.com/ywltby) | `菲八啾比` | `1` | `0.78125000` | 2026-09-10 16:11 UTC |
 | `1314` | `9a910afbdb41be19598d…` | [@ywltby](https://github.com/ywltby) | `天不生我ZmjjKK，瓦圈万古如长夜。` | `1` | `0.78125000` | 2026-09-10 16:08 UTC |
 | `1313` | `6e199bbbb44bf7227979…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `0.78125000` | 2026-09-10 16:05 UTC |
@@ -44,7 +45,6 @@
 | `1309` | `c816ad26e1b1cf5d6cee…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `0.78125000` | 2026-09-10 15:54 UTC |
 | `1308` | `d34a7e8b6ac215eff1f7…` | [@americanvain](https://github.com/americanvain) | `testing` | `1` | `0.78125000` | 2026-09-10 15:53 UTC |
 | `1307` | `7c444bea08ae652cdd54…` | [@americanvain](https://github.com/americanvain) | `testing` | `1` | `0.78125000` | 2026-09-10 15:50 UTC |
-| `1306` | `7f65e8252c2dc3490e93…` | [@americanvain](https://github.com/americanvain) | `testing` | `1` | `0.78125000` | 2026-09-10 15:47 UTC |
 
 ### Miners
 
@@ -58,7 +58,7 @@
 | [@ram0verflow](https://github.com/ram0verflow) | `62` | `4.7%` |
 | [@eltociear](https://github.com/eltociear) | `50` | `3.8%` |
 | [@ethahae](https://github.com/ethahae) | `48` | `3.6%` |
-| [@americanvain](https://github.com/americanvain) | `41` | `3.1%` |
+| [@americanvain](https://github.com/americanvain) | `42` | `3.2%` |
 | [@nodgd](https://github.com/nodgd) | `28` | `2.1%` |
 | [@MingKeZhiNeng](https://github.com/MingKeZhiNeng) | `24` | `1.8%` |
 | [@lusgt](https://github.com/lusgt) | `17` | `1.3%` |
@@ -83,7 +83,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1qgz45v82mfe8ksyyfezss7m2p8udlsdwp0984vv` | `93.75000000 ROFL` |
 | _unclaimed_ | `rofl1qnxjnqn35kf6cqutjyfwz4xnldyextf904gxe24` | `67.18750000 ROFL` |
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
-| _unclaimed_ | `rofl1qxu56n53xphqyvpxdqgdny8rvg5hvuw5n58s6ke` | `42.96875000 ROFL` |
+| _unclaimed_ | `rofl1qxu56n53xphqyvpxdqgdny8rvg5hvuw5n58s6ke` | `43.75000000 ROFL` |
 | _unclaimed_ | `rofl1qslgfl5lmx0czpcyq9g6qh29cdrq238mapaxcr5` | `37.50000000 ROFL` |
 | [@KirkLee12345](https://github.com/KirkLee12345) | `rofl1qkf8jkr6xz5jaa7a33usnvl3x2njcvzlrgjpe62` | `37.50000000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
@@ -99,7 +99,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 1315. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 1316. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
