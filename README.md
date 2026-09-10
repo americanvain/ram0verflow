@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1105"><img src="assets/ledger-light.svg?v=1105" width="100%" alt="ROFL ledger, height 1105"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1106"><img src="assets/ledger-light.svg?v=1106" width="100%" alt="ROFL ledger, height 1106"></picture>
 
 | | |
 |---|---|
-| **height** | `1105` |
-| **tip** | `9e5c92943cb42521637b8abeeb2f12dfae046e57805442cd0e7680cd237ce721` |
+| **height** | `1106` |
+| **tip** | `23d93ebf99c6f39643096495f956141720b75c917e6fd76ece4c49604567c6da` |
 | **difficulty** | `146,587,503,412,197,352,788,364,980,387,840.0`  (bits `0x110236bd`) |
-| **chainwork** | `1,463,103,644,495,414,402,174,773,463,540,462,427,520` expected hashes |
-| **supply** | `20431.25000000 ROFL` in `1105` unspent outputs |
+| **chainwork** | `1,616,811,782,473,362,661,068,082,339,527,975,688,752` expected hashes |
+| **supply** | `20432.81250000 ROFL` in `1106` unspent outputs |
 | **next reward** | `1.56250000 ROFL` |
-| **next retarget** | in `14` block(s) |
-| **next halving** | in `154` block(s) |
-| **transactions** | `1107` |
+| **next retarget** | in `13` block(s) |
+| **next halving** | in `153` block(s) |
+| **transactions** | `1108` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `1106` | `23d93ebf99c6f3964309…` | [@ygrzjh](https://github.com/ygrzjh) | `gm from turbo C sniper @ygrzjh` | `1` | `1.56250000` | 2026-09-10 04:01 UTC |
 | `1105` | `9e5c92943cb42521637b…` | [@ywltby](https://github.com/ywltby) | `天不生我ZmjjKK，瓦圈万古如长夜。` | `1` | `1.56250000` | 2026-09-10 03:54 UTC |
 | `1104` | `5336f962917adc1c2612…` | [@ywltby](https://github.com/ywltby) | `let’s Go~~` | `1` | `1.56250000` | 2026-09-10 03:53 UTC |
 | `1103` | `b76c0752e37a49c31e6e…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 03:50 UTC |
@@ -44,7 +45,6 @@
 | `1099` | `a4dcc3ed70c0154a1fd1…` | [@ygrzjh](https://github.com/ygrzjh) | `gm from turbo C sniper @ygrzjh` | `1` | `1.56250000` | 2026-09-10 03:37 UTC |
 | `1098` | `efa6b9bc06e9f2e22283…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 03:34 UTC |
 | `1097` | `86091e60ccab6cb0732e…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 03:30 UTC |
-| `1096` | `3578c96ed0d6829f26f3…` | [@ywltby](https://github.com/ywltby) | `天不生我ZmjjKK，瓦圈万古如长夜。` | `1` | `1.56250000` | 2026-09-10 03:26 UTC |
 
 ### Miners
 
@@ -88,7 +88,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qzmkk6cfxs3jd322twyv7luy9eqdpcn2znmusvq` | `3.12500000 ROFL` |
 | _unclaimed_ | `rofl1qnxjnqn35kf6cqutjyfwz4xnldyextf904gxe24` | `3.12500000 ROFL` |
-| _unclaimed_ | `rofl1qp86qhl5pats9c28n48zd9pjda8t4jjeqwk7p44` | `1.56250000 ROFL` |
+| _unclaimed_ | `rofl1qp86qhl5pats9c28n48zd9pjda8t4jjeqwk7p44` | `3.12500000 ROFL` |
 
 ### Recent transfers
 
@@ -96,7 +96,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 1105. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 1106. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
