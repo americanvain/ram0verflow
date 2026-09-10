@@ -17,24 +17,25 @@
 
 <!-- ROFL:BEGIN -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1179"><img src="assets/ledger-light.svg?v=1179" width="100%" alt="ROFL ledger, height 1179"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/ledger-dark.svg?v=1180"><img src="assets/ledger-light.svg?v=1180" width="100%" alt="ROFL ledger, height 1180"></picture>
 
 | | |
 |---|---|
-| **height** | `1179` |
-| **tip** | `93ba6469f9bbd458dd74484e18bd040c48e03dc6066245bccfba78cf59fc8368` |
+| **height** | `1180` |
+| **tip** | `eab2f3141e07cdf6cfc5cc8a67c9cb4540816a70b90941b9a89ca0cdfc04970e` |
 | **difficulty** | `12,764,138,785,634,946,618,874,444,872,941,568.0`  (bits `0x10068234`) |
-| **chainwork** | `259,347,094,572,107,176,411,885,983,509,682,310,975,668` expected hashes |
-| **supply** | `20546.87500000 ROFL` in `1179` unspent outputs |
+| **chainwork** | `272,731,264,163,393,126,701,731,777,834,818,006,242,955` expected hashes |
+| **supply** | `20548.43750000 ROFL` in `1180` unspent outputs |
 | **next reward** | `1.56250000 ROFL` |
-| **next retarget** | in `4` block(s) |
-| **next halving** | in `80` block(s) |
-| **transactions** | `1181` |
+| **next retarget** | in `3` block(s) |
+| **next halving** | in `79` block(s) |
+| **transactions** | `1182` |
 
 ### Recent blocks
 
 | # | hash | miner | message | txs | reward | mined |
 |--:|---|---|---|--:|--:|---|
+| `1180` | `eab2f3141e07cdf6cfc5…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 08:24 UTC |
 | `1179` | `93ba6469f9bbd458dd74…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 08:22 UTC |
 | `1178` | `1a31391aa95167df2946…` | [@ywltby](https://github.com/ywltby) | `输你一场，不代表我们会一直输给你。` | `1` | `1.56250000` | 2026-09-10 08:18 UTC |
 | `1177` | `4ee459e4e20a489e20c1…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 08:12 UTC |
@@ -44,22 +45,21 @@
 | `1173` | `f72245c826781a271b31…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 07:58 UTC |
 | `1172` | `eb9654a7e0c1c42778c5…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 07:57 UTC |
 | `1171` | `6e36383411c2301fa847…` | [@sd5884703](https://github.com/sd5884703) | `社会实验·连续挖矿` | `1` | `1.56250000` | 2026-09-10 07:53 UTC |
-| `1170` | `b9d781438e3e4e347564…` | [@ethahae](https://github.com/ethahae) | `gm from a C solver` | `1` | `1.56250000` | 2026-09-10 07:47 UTC |
 
 ### Miners
 
 | miner | blocks | share |
 |---|--:|--:|
-| [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `41.4%` |
+| [@ksanjeev284](https://github.com/ksanjeev284) | `488` | `41.3%` |
 | [@ywltby](https://github.com/ywltby) | `161` | `13.6%` |
 | [@sd5884703](https://github.com/sd5884703) | `106` | `9.0%` |
 | [@bulanzade](https://github.com/bulanzade) | `96` | `8.1%` |
 | [@uselessfree](https://github.com/uselessfree) | `96` | `8.1%` |
-| [@ram0verflow](https://github.com/ram0verflow) | `62` | `5.3%` |
+| [@ram0verflow](https://github.com/ram0verflow) | `62` | `5.2%` |
 | [@eltociear](https://github.com/eltociear) | `50` | `4.2%` |
 | [@nodgd](https://github.com/nodgd) | `28` | `2.4%` |
 | [@MingKeZhiNeng](https://github.com/MingKeZhiNeng) | `24` | `2.0%` |
-| [@ethahae](https://github.com/ethahae) | `20` | `1.7%` |
+| [@ethahae](https://github.com/ethahae) | `21` | `1.8%` |
 | [@lusgt](https://github.com/lusgt) | `17` | `1.4%` |
 | [@lovivi](https://github.com/lovivi) | `11` | `0.9%` |
 
@@ -84,7 +84,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 | _unclaimed_ | `rofl1q5yjjcsx8nmxxej5djurawqyxepzhqwcxumhret` | `50.00000000 ROFL` |
 | _unclaimed_ | `rofl1qslgfl5lmx0czpcyq9g6qh29cdrq238mapaxcr5` | `37.50000000 ROFL` |
 | [@KirkLee12345](https://github.com/KirkLee12345) | `rofl1qkf8jkr6xz5jaa7a33usnvl3x2njcvzlrgjpe62` | `37.50000000 ROFL` |
-| _unclaimed_ | `rofl1qnxjnqn35kf6cqutjyfwz4xnldyextf904gxe24` | `31.25000000 ROFL` |
+| _unclaimed_ | `rofl1qnxjnqn35kf6cqutjyfwz4xnldyextf904gxe24` | `32.81250000 ROFL` |
 | _unclaimed_ | `rofl1q3yhuearvq4kktun6caezqwdnkaeqmx9gcjlajy` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qgzsmx8axle22lgkj8gulm3rh9hzcd9jjjzmlq0` | `12.50000000 ROFL` |
 | _unclaimed_ | `rofl1qrpnrtc6jnaku3lpaghdn6z6gxf4h88jrdpcmxw` | `6.25000000 ROFL` |
@@ -97,7 +97,7 @@ _Find your own name here once you have run `python3 wallet.py identity`._
 |--:|---|---|--:|---|
 | `11` | `rofl1qhkhmy848s0…` | `rofl1q3jwm3gz2s9…` | `100.00000000` | gm @notram0verflow |
 
-<sub>Rendered from `chain/blocks.jsonl` at height 1179. Verify it yourself: <code>python3 verify.py</code></sub>
+<sub>Rendered from `chain/blocks.jsonl` at height 1180. Verify it yourself: <code>python3 verify.py</code></sub>
 
 <!-- ROFL:END -->
 
